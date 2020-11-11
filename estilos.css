@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #333333;
+}
+
+
+/* ACORDION */
+
+div.acordeon {
+    padding: 200px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #BDBDBD;
+}
+
+ul.acordeon li+div {
+    overflow: hidden;
+    height: auto;
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out;
+    transition-timing-function: ease;
+    justify-content: center;
+}
+
+ul.acordeon li+div.visible {
+    max-height: 100vh;
+    text-decoration: none;
+}
+
+ul.acordeon {
+    width: 100%;
+    list-style-type: none;
+}
+
+ul.acordeon li {
+    padding: auto;
+    justify-content: center;
+    height: 40px;
+    background-color: #4F4F4F;
+    text-align: center;
+    border-radius: 5px;
+    border-color: white;
+    font-size: 20px;
+}
+
+ul.acordeon div {
+    margin: 10px;
+    /* background: rgb(242, 25, 53);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(168, 32, 49, 1) 50%, rgb(153, 13, 32) 100%); */
+    background-color: #11074b;
+    transform-style: preserve-3d;
+}
+
+ul.acordeon div.cont:hover {
+    box-shadow: 0 0 5px #e2dcdd, 0 0 100px #b8a8ad, 0 0 10px #d17191;
+    transform-style: preserve-3d;
+    transform: scale(1.06);
+    width: auto;
+    height: auto;
+    background: linear-gradient(90deg, rgba(80, 7, 179, 1) 0%, rgba(168, 32, 49, 1) 50%, rgba(0, 0, 0, 1) 100%);
+}
+
+ul.acordeon div p {
+    margin-left: 50px;
+    margin-right: 50px;
+}
