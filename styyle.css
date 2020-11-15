@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0%;
+    background-color: #333333;
+}
+
+.navbar {
+    background-color: black;
+    position: absolute;
+    width: 1440px;
+    height: 61px;
+    left: 1px;
+    top: 0px;
+}
+
+.reproductor {
+    background-color: slategray;
+    position: absolute;
+    width: 1440px;
+    height: 73px;
+    left: 0px;
+    top: 823px;
+}
+
+/* #region song-html */
+
+.opiniones {
+    background-color: #4F4F4F;
+    position: absolute;
+    width: 395px;
+    height: 661px;
+    left: 953px;
+    top: 111px;
+}
+
+.opinion {
+    position: absolute;
+    left: 5.57%;
+    right: 5.32%;
+    top: 10.44%;
+    bottom: 78.37%;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.opinion-2 {
+    position: absolute;
+    left: 5.82%;
+    right: 5.06%;
+    top: 24.21%;
+    bottom: 64.6%;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.stars-voted {
+    background-image: url(img/Stars\ -\ voted.png);
+    position: absolute;
+    left: 21.27%;
+    right: 20.51%;
+    top: 65.81%;
+    bottom: 28.14%;
+    background-color: #4F4F4F;
+}
+
+.opinion-usuario {
+    position: absolute;
+    left: 6.33%;
+    right: 5.57%;
+    top: 74.13%;
+    bottom: 9.08%;
+
+    background: #C4C4C4;
+    border-radius: 20px;
+}
+
+.btn-enviar {
+    position: absolute;
+    left: 39.75%;
+    right: 34.03%;
+    top: 93.19%;
+    bottom: 1.36%;
+    background: url(img/button-enabled.png);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.big-song-photo {
+    position: absolute;
+    width: 721px;
+    height: 291px;
+    left: calc(50% - 721px/2 - 274.5px);
+    top: calc(50% - 291px/2 - 188.5px);
+    background: url(img/bobmarley.jpg);
+    filter: drop-shadow(0px 3.88785px 3.88785px rgba(0, 0, 0, 0.25));
+    border-radius: 19.4393px;
+}
+
+.biografia {
+    position: absolute;
+    width: 719px;
+    height: 231px;
+    left: 87px;
+    top: 564px;
+    background: #4F4F4F;
+    border-radius: 10px;
+}
+
+.biografia-tittle {
+    position: absolute;
+    width: 286px;
+    height: 54px;
+    left: 103px;
+    top: 573px;
+    background: #4F4F4F;
+
+    /* H3 */
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 56px;
+    /* or 117% */
+
+    display: flex;
+    align-items: center;
+
+    /* Gray 4 */
+
+    color: #BDBDBD;
+}
+
+.biografia-text {
+    position: absolute;
+    width: 644px;
+    height: 134px;
+    left: 119px;
+    top: 643px;
+    overflow-y: scroll;
+
+    /* H4 */
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 34px;
+    line-height: 36px;
+    /* or 106% */
+
+    display: flex;
+    align-items: center;
+
+    /* Gray 3 */
+
+    color: #828282;
+    background-color: #4F4F4F;
+
+}
+
+.button-download {
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    left: 620px;
+    top: 407px;
+    background-image: url(img/download.png);
+}
+
+.button-share {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 700px;
+    top: 420px;
+    background-image: url(img/share.png);
+}
+
+.button-fav {
+    position: absolute;
+    width: 36px;
+    height: 34.36px;
+    left: 761px;
+    top: 423px;
+    background-image: url(img/fav.png);
+}
+
+.song-tittle {
+    position: absolute;
+    width: 304px;
+    height: 46px;
+    left: 59px;
+    top: 420px;
+
+    /* H4 */
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 34px;
+    line-height: 36px;
+    /* or 106% */
+
+    text-align: center;
+
+    /* Gray 4 */
+
+    color: #BDBDBD;
+}
+
+.song-artist {
+    position: absolute;
+    width: 165px;
+    height: 32px;
+    left: 94px;
+    top: 462px;
+
+    /* H5 */
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    /* or 120% */
+
+    letter-spacing: 0.18px;
+
+    /* Gray 3 */
+
+    color: #828282;
+}
+
+/* #endregion */
