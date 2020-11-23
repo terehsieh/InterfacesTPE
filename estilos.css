@@ -2,9 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #333333;
+    /* background-color: #333333; */
     color: white;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: #333333;
 }
 
 h1 {
@@ -15,6 +19,47 @@ h1 {
 
 a {
     text-decoration: none;
+}
+
+header {
+    width: auto;
+    height: 73px;
+    background: rgb(0, 0, 0);
+    /* background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(79, 79, 79, 1) 40%, rgba(79, 79, 79, 1) 60%, rgba(0, 0, 0, 1) 100%); */
+}
+
+.carousel {
+    width: 700px;
+    height: 300px;
+    position: relative;
+}
+
+.carousel-inner {
+    width: 700px;
+    height: 300px;
+    justify-content: end;
+}
+
+
+/* FOOTER - REPRODUCTOR */
+
+footer {
+    position: absolute;
+    width: auto;
+    height: 73px;
+    left: -1px;
+    top: 640px;
+    /* background-color: #000000; */
+    /* background-image: url("img/reproductor.png"); */
+}
+
+.reproductor {
+    position: fixed;
+    /* display: inline-block;
+    position: relative; */
+    /* background-image: url("img/reproductor.png");
+    width: 100%;
+    height: 50px; */
 }
 
 
@@ -220,4 +265,88 @@ ul.acordeon div p {
     padding-left: 25px;
     padding-right: 25px;
     background-color: #06709e;
+}
+
+
+/* PLAYLIST */
+
+.titulo {
+    grid-area: titulo;
+}
+
+.c1 {
+    grid-area: sub1;
+}
+
+.c2 {
+    grid-area: sub2;
+}
+
+.c3 {
+    grid-area: sub3;
+}
+
+.c4 {
+    grid-area: sub4;
+}
+
+.titulo,
+.c1,
+.c2,
+.c3,
+.c4 {
+    margin-top: 20px;
+}
+
+.foto {
+    grid-area: foto;
+}
+
+.playlists {
+    grid-area: playlists;
+    text-align: left;
+}
+
+div.explorar {
+    width: 760px;
+    height: 350px;
+    display: grid;
+    grid-template-columns: 30% 15% 15% 15% 15%;
+    grid-template-rows: auto;
+    grid-template-areas: "titulo sub1 sub2 sub3 sub4" "foto playlists playlists playlists playlists";
+    background-color: rgba(33, 33, 33, 0.2);
+    margin: 10px;
+    text-align: center;
+}
+
+.icon {
+    width: 25px;
+    width: 25px;
+    /* visibility: hidden; */
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        /* background-color: lightblue; */
+    }
+    .icon {
+        visibility: hidden;
+    }
+    .c1,
+    .c2,
+    .c3,
+    .c4 {
+        visibility: hidden;
+    }
+    div.explorar {
+        width: auto;
+        height: auto;
+        display: grid;
+        grid-template-columns: 95%;
+        grid-template-rows: auto;
+        grid-template-areas: "titulo" "foto" "playlists";
+        background-color: rgba(33, 33, 33, 0.3);
+        margin: 10px;
+        text-align: center;
+    }
 }
