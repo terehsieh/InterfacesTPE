@@ -74,7 +74,8 @@ header {
     background: darkblue;
 }
 
-.navigation ul li a {
+.navigation ul li a,
+.navigation ul li {
     position: relative;
     display: block;
     width: 100%;
@@ -82,7 +83,8 @@ header {
     text-decoration: none;
 }
 
-.navigation ul li a .icon {
+.navigation ul li a .icon,
+.navigation ul li .icon {
     position: relative;
     display: block;
     min-width: 60px;
@@ -91,11 +93,13 @@ header {
     text-align: center;
 }
 
-.navigation ul li a .icon .fa {
+.navigation ul li a .icon .fa,
+.navigation ul li .icon .fa {
     font-size: 24px;
 }
 
-.navigation ul li a .title {
+.navigation ul li a .title,
+.navigation ul li .title {
     position: relative;
     display: block;
     padding: 0 10px;
@@ -103,6 +107,30 @@ header {
     line-height: 60px;
     text-align: start;
     white-space: nowrap;
+}
+
+.navigation ul li button {
+    color: #000000;
+    height: 30px;
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    margin-top: 16px;
+    margin-right: 5px;
+    white-space: nowrap;
+    border-radius: 10px;
+}
+
+.navigation ul li input {
+    height: 30px;
+    width: 100%;
+    color: #000000;
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    margin-top: 16px;
+    white-space: nowrap;
+    border-radius: 10px;
 }
 
 .toggle {
@@ -384,6 +412,23 @@ ul.acordeon div p {
 }
 
 
+/* #card1 {
+    grid-area: card1;
+}
+
+#card2 {
+    grid-area: card2;
+}
+
+#card3 {
+    grid-area: card3;
+}
+
+#card4 {
+    grid-area: card4;
+} */
+
+
 /* PLAYLIST */
 
 .titulo {
@@ -466,4 +511,13 @@ div.explorar {
         margin: 10px;
         text-align: center;
     }
+    /* PLANES */
+    /* div.cards {
+        width: auto;
+        height: auto;
+        display: grid;
+        grid-template-columns: 45% 45%;
+        grid-template-rows: auto;
+        grid-template-areas: "card4 card3" "card2 card1";
+    } */
 }
