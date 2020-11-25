@@ -7,35 +7,86 @@
     <title>Registracion</title>
     <!-- <link rel="stylesheet" href="css/style.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
 
+    <header>
+        <div class="navigation">
+            <ul>
+                <li><span class="icon"><i class="fa fa-search" aria-hidden="true"></i></span><span class="title"><input
+                            type="text"></span> <button>Buscar</button></li>
+                <li><a href="home.html"><span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span><span
+                            class="title">Home</span></a></li>
+                <li><a href="perfil.html"><span class="icon"><i class="fa fa-user" aria-hidden="true"></i></span><span
+                            class="title">Perfil</span></a></li>
+                <li><a href=""><span class="icon"><i class="fa fa-heart" aria-hidden="true"></i></span><span
+                            class="title">Favoritos</span></a></li>
+                <li><a href=""><span class="icon"><i class="fa fa-music" aria-hidden="true"></i></span><span
+                            class="title">Mis playlist</span></a></li>
+                <li><a href=""><span class="icon"><i class="fa fa-podcast" aria-hidden="true"></i></span><span
+                            class="title">Mis posdcast</span></a></li>
+                <li><a href=""><span class="icon"><i class="fa fa-cogs" aria-hidden="true"></i></span><span
+                            class="title">Configuración</span></a></li>
+                <li><a href=""><span class="icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span><span
+                            class="title">Cerrar session</span></a></li>
+                <li><a href="faq.html"><span class="icon"><i class="fa fa-question-circle"
+                                aria-hidden="true"></i></span><span class="title">Q & A</span></a></li>
+            </ul>
+        </div>
 
+        <div class="toggle" onclick='toggleMenu()'>
+
+        </div>
+        <script>
+            function toggleMenu() {
+                let navigation = document.querySelector('.navigation ');
+                navigation.classList.toggle('active');
+                let toggle = document.querySelector('.toggle ');
+                toggle.classList.toggle('active ');
+            }
+        </script>
+    </header>
 
     <div class="form">
 
-        <h1>REGISTRATE</h1>
-        <form action="">
-            <button class="register-fb"><img height="30px" width="30px" src="icons/fb.svg" alt="">
+        <h1 class="titulo">REGISTRATE</h1>
+        <div class="registar1"> <button class="register-fb"><img height="30px" width="30px" src="icons/fb.svg" alt="">
                 <a href="https://www.facebook.com/">
                     Registrate con Facebook
                 </a>
-            </button>
-            <button class="register-google"><img height="30px" width="30px" src="icons/search.svg" alt="">
-                <a href="https://accounts.google.com/signin/v2/identifier?service=accountsettings&continue=https%3A%2F%2Fmyaccount.google.com%3Futm_source%3Daccount-marketing-page%26utm_medium%3Dgo-to-account-button&flowName=GlifWebSignIn&flowEntry=ServiceLogin">
+            </button></div>
+        <div class="registar2"> <button class="register-google"><img height="30px" width="30px" src="icons/search.svg"
+                    alt="">
+                <a
+                    href="https://accounts.google.com/signin/v2/identifier?service=accountsettings&continue=https%3A%2F%2Fmyaccount.google.com%3Futm_source%3Daccount-marketing-page%26utm_medium%3Dgo-to-account-button&flowName=GlifWebSignIn&flowEntry=ServiceLogin">
                     Registrate con Google
                 </a>
             </button>
+        </div>
+        <div class="input">
+            <form action="">
 
-            <input type="text" name="" id="" placeholder="Ingrese su nombre">
-            <div class="container">
-                <input type="password" name="password" id="password" placeholder="Ingrese su contraseña">
-                <i class="far fa-eye" id="togglePassword"></i>
-            </div>
-            <button class="button">REGISTRAR</button>
-        </form>
+                <label for="">Nombre</label>
+                <input class="input" type="text" name="" id="" placeholder="Ingrese su nombre">
+                <div class="container">
+                    <label for="">Contraseña</label>
+                    <input class="input" type="password" name="password" id="password" placeholder="Ingrese su contraseña">
+                    <i class="far fa-eye" id="togglePassword"></i>
+                </div>
+                <div class="container">
+                    <label for="">Repetir Contraseña</label>
+                    <input class="input" type="password" name="password" id="password" placeholder="Ingrese su contraseña">
+                    <i class="far fa-eye" id="togglePassword"></i>
+                </div>
+                <button class="button">REGISTRAR</button>
+            </form>
+        </div>
+
+
+
     </div>
     <script src="js/script.js"></script>
 </body>
