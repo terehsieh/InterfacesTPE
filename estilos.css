@@ -442,7 +442,9 @@ ul.acordeon div.cont:hover {
     height: 500px;
     padding-top: 40px;
     border-radius: 30px;
-    background-color: #1DB1F0;
+    /* background-color: #1DB1F0; */
+    /* opacity: 0.7; */
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .card .price {
@@ -575,7 +577,8 @@ div.explorar {
     }
     /* PLANES */
     div.cards {
-        margin-left: 50px;
+        margin: 0;
+        margin-left: 30px;
         width: auto;
         height: auto;
         display: grid;
@@ -584,9 +587,11 @@ div.explorar {
         grid-template-areas: "card4" "card3" "card2" "card1";
     }
     div.card {
+        padding-top: 20px;
+        padding-bottom: 20px;
         height: auto;
         margin: 10px;
-        padding: 5px;
+        width: auto;
     }
     /* Q & A */
     div.acordeon {
