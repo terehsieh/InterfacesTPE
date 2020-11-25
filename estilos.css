@@ -144,6 +144,7 @@ a {
     height: 60px;
     background: #1db1f0;
     cursor: pointer;
+    z-index: 1;
 }
 
 .toggle.active {
@@ -490,23 +491,6 @@ ul.acordeon div.cont:hover {
 }
 
 
-/* #card1 {
-    grid-area: card1;
-}
-
-#card2 {
-    grid-area: card2;
-}
-
-#card3 {
-    grid-area: card3;
-}
-
-#card4 {
-    grid-area: card4;
-} */
-
-
 /* PLAYLIST */
 
 .titulo {
@@ -623,5 +607,23 @@ div.explorar {
     ul.acordeon div.cont {
         padding: 0;
         margin: 5px;
+    }
+    /* FORMULARIOS, Registrar */
+    .form {
+        padding: 0;
+        margin: 0;
+        padding-top: 80px;
+        height: auto;
+        width: auto;
+    }
+    div.input {
+        margin-top: 20px;
+    }
+    div.input input#texto1,
+    div.input input#texto2,
+    div.input input#texto3 {
+        margin-left: 30px;
+        width: 310px;
+        margin-top: 5px;
     }
 }
