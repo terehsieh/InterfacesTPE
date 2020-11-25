@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #333333;
+}
+
+.logo {
+    margin-top: 10%;
+    margin-left: 40%;
+}
+
+.right-content {
+    margin-top: 5%;
+    margin-left: 40%;
+}
+
+p {
+    text-transform: capitalize;
+    font-size: 25px;
+}
+
+button,
+a {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    padding: 15px 30px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 20px;
+    background: #2196f3;
+    border: none;
+    margin-top: 20px;
+}
+
+
+
+
+a:hover {
+    color: whitesmoke;
+    background: #2196f3;
+    transform: scale(1.05);
+    transition-delay: 1.5s ease-in;
+}
