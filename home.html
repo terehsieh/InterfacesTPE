@@ -16,16 +16,33 @@
 
 <body>
     <header>
-        <img height="40" width="40" src="icons/spotify.svg" alt="">
-        <ul>
-            <li>
-                <p>Home</p>
-            </li>
-            <li>
-                <p>Planes</p>
-            </li>
-        </ul>
+        <!-- https://www.youtube.com/watch?v=DvpSKoCyN5Q -->
+        <div class="navigation">
+            <ul>
+                <li><span class="icon"><i class="fa fa-search" aria-hidden="true"></i></span><span class="title"><input type="text" ></span> <button>Buscar</button></li>
+                <li><a href="home.html"><span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span><span class="title">Home</span></a></li>
+                <li><a href="perfil.html"><span class="icon"><i class="fa fa-user" aria-hidden="true"></i></span><span class="title">Perfil</span></a></li>
+                <li><a href=""><span class="icon"><i class="fa fa-heart" aria-hidden="true"></i></span><span class="title">Favoritos</span></a></li>
+                <li><a href=""><span class="icon"><i class="fa fa-music" aria-hidden="true"></i></span><span class="title">Mis playlist</span></a></li>
+                <li><a href=""><span class="icon"><i class="fa fa-podcast" aria-hidden="true"></i></span><span class="title">Mis posdcast</span></a></li>
+                <li><a href=""><span class="icon"><i class="fa fa-cogs" aria-hidden="true"></i></span><span class="title">Configuración</span></a></li>
+                <li><a href=""><span class="icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span><span class="title">Cerrar session</span></a></li>
+                <li><a href="faq.html"><span class="icon"><i class="fa fa-question-circle" aria-hidden="true"></i></span><span class="title">Q & A</span></a></li>
+            </ul>
+        </div>
 
+        <div class="toggle" onclick='toggleMenu()'>
+
+        </div>
+        <script>
+            function toggleMenu() {
+                console.log("entro")
+                let navigation = document.querySelector('.navigation ');
+                navigation.classList.toggle('active');
+                let toggle = document.querySelector('.toggle ');
+                toggle.classList.toggle('active ');
+            }
+        </script>
     </header>
     <section>
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -56,11 +73,72 @@
         </div>
     </section>
 
+    <div class="explorar">
+        <div class="titulo">
+            <h2>Descubre</h2>
+        </div>
+        <div class="c1">
+            <p> Mas escuchadas</p>
+        </div>
+        <div class="c2">
+            <p> Top nacional</p>
+        </div>
+        <div class="c3">
+            <p>Top internacional</p>
+        </div>
+        <div class="c4">
+            <p> Nuevos lanzamientos</p>
+        </div>
+        <div class="foto"> <img width="200px" height="200px" src="img/bobmarley.jpg" alt=""></div>
+        <table class="playlists">
+            <tbody>
+                <tr class="song">
+                    <td><img class="icon" src="icons/play-button.svg" alt=""> </td>
+                    <td>01</td>
+                    <td>No me olvides</td>
+                    <td>La Beriso</td>
+                    <td>02:36</td>
+                </tr>
+                <tr class="song">
+                    <td><img class="icon" src="icons/play-button.svg" alt=""> </td>
+                    <td>02</td>
+                    <td>Crimen</td>
+                    <td>Gustavo Cerati</td>
+                    <td>02:36</td>
+                </tr>
+                <tr class="song">
+                    <td><img class="icon" src="icons/play-button.svg" alt=""> </td>
+                    <td>03</td>
+                    <td>Creo</td>
+                    <td>Callejeros</td>
+                    <td>02:36</td>
+                </tr>
+                <tr class="song">
+                    <td><img class="icon" src="icons/play-button.svg" alt=""> </td>
+                    <td>04</td>
+                    <td>Seguir viviendo sin tu amor</td>
+                    <td>Catupecu Machu</td>
+                    <td>02:36</td>
+                </tr>
+                <tr class="song">
+                    <td><img class="icon" src="icons/play-button.svg" alt=""> </td>
+                    <td>05</td>
+                    <td>Un osito de peluche de Taiwan</td>
+                    <td>Los auntenticos..</td>
+                    <td>02:36</td>
+                </tr>
+            </tbody>
+
+        </table>
+
+
+    </div>
+
     <footer>
         <div class="reproductor">
             <img width="100%" height="50px" src="img/reproductor.png" alt="">
         </div>
-        <button class="opciones">OPCIONES</button>
+        <!-- <button class="opciones">OPCIONES</button> -->
     </footer>
 
 
