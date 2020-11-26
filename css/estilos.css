@@ -249,21 +249,106 @@ div.contenedor {
 footer {
     position: absolute;
     width: auto;
-    height: 73px;
+    height: 55px;
     left: -1px;
-    top: 640px;
+    bottom: 0;
     z-index: 2;
-    /* background-color: #000000; */
     /* background-image: url("img/reproductor.png"); */
 }
 
+.reproductor .foto {
+    grid-area: fotoR;
+    margin: 5px;
+    margin-left: 10px;
+}
+
+.reproductor .cancion {
+    grid-area: cancion;
+}
+
+.reproductor .artista {
+    grid-area: artista;
+}
+
+.reproductor .type {
+    grid-area: type;
+    border-left: 1px white solid;
+    padding-left: 10px;
+    /* place-self: center; */
+}
+
+.reproductor .heart {
+    grid-area: heart;
+    font-size: 25px;
+}
+
+.reproductor .opciones {
+    grid-area: opciones;
+}
+
+
+/* Ranking star */
+
+.reproductor .star {
+    grid-area: star;
+}
+
+.checked {
+    color: orange;
+}
+
+.reproductor .player {
+    grid-area: player;
+    justify-items: stretch;
+    /* align-items: stretch; */
+}
+
+.reproductor .player i.fa-step-backward,
+.reproductor .player i.fa-step-forward {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 25px;
+}
+
+.reproductor .player i.fa-play-circle-o {
+    font-size: 40px;
+}
+
+
+/* Volumen */
+
+.reproductor .volume {
+    grid-area: volume;
+}
+
+input.range {
+    width: 100px;
+}
+
+.reproductor .playlist {
+    grid-area: playlist;
+}
+
 .reproductor {
-    position: fixed;
-    /* display: inline-block;
-    position: relative; */
-    /* background-image: url("img/reproductor.png");
+    border-top: solid 2px white;
     width: 100%;
-    height: 50px; */
+    height: 55px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(29, 28, 28, 1) 25%, rgba(29, 28, 28, 1) 50%, rgba(29, 28, 28, 1) 75%, rgba(0, 0, 0, 1) 100%);
+    position: fixed;
+    display: grid;
+    align-items: center;
+    justify-items: start;
+    grid-template-columns: 6% 10% 5% 5% 10% 20% 10% 15% 5%;
+    grid-template-rows: auto;
+    grid-column-gap: 20px;
+    grid-template-areas: "fotoR cancion type heart opciones player star volume playlist" "fotoR artista type heart opciones player star volume playlist"
+}
+
+.reproductor img.foto {
+    width: 40px;
+    height: 40px;
+    grid-area: fotoR;
 }
 
 
@@ -694,6 +779,28 @@ li.listaR {
 }
 
 
+/* Dropup */
+
+.dropup-content {
+    display: none;
+    position: absolute;
+    bottom: 50px;
+    background-color: rgba(0, 0, 0, 1);
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 0;
+}
+
+.dropup-content a.active {
+    background-color: #1DB1F0;
+}
+
+#playlist {
+    min-width: 300px
+}
+
+
 /* Dropdown */
 
 .dropdown {
@@ -711,13 +818,14 @@ li.listaR {
     cursor: pointer;
 }
 
-.dropdown {
+.dropdown,
+.dropup {
     position: relative;
     display: inline-block;
 }
 
 .dropdown button {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .dropdown-content {
@@ -730,22 +838,26 @@ li.listaR {
     z-index: 1;
 }
 
-.dropdown-content a {
+.dropdown-content a,
+.dropup-content a {
     color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
-.dropdown-content a:hover {
+.dropdown-content a:hover,
+.dropup-content a:hover {
     background-color: rgba(255, 255, 255, 0.4)
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content,
+.dropup:hover .dropup-content {
     display: block;
 }
 
-.dropdown:hover .dropbtn {
+.dropdown:hover .dropbtn,
+.dropup:hover .dropbtn {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -849,6 +961,7 @@ li.listaR {
     }
     .resultados {
         margin: 10px;
+        margin-bottom: 80px;
     }
     .canciones {
         width: 100%;
@@ -869,5 +982,8 @@ li.listaR {
     .detalles,
     .nombreCancion {
         margin-left: 10px;
+    }
+    h1 {
+        padding-top: 100px;
     }
 }
