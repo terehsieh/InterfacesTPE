@@ -62,8 +62,8 @@ div.contenedor {
     justify-content: end;
 }
 
-.carousel-inner img {
-    height: 100%;
+.carousel-item img {
+    height: 300px;
 }
 
 .propaganda {
@@ -677,6 +677,7 @@ p.filtro:hover {
 
 .nombreCancion {
     grid-area: nombreCancion;
+    font-weight: bold;
 }
 
 .detalles {
@@ -723,8 +724,8 @@ li.listaR {
     right: 0;
     display: none;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
-    min-width: 160px;
+    background-color: rgba(0, 0, 0, 1);
+    min-width: 200px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
@@ -838,5 +839,35 @@ li.listaR {
         margin-left: 30px;
         width: 310px;
         margin-top: 5px;
+    }
+    /* BUSQUEDAS */
+    .filtros {
+        overflow: auto;
+    }
+    .filtro {
+        font-size: 15px;
+    }
+    .resultados {
+        margin: 10px;
+    }
+    .canciones {
+        width: 100%;
+    }
+    .fotoLista,
+    .fotoArtista {
+        width: 50px;
+        height: 50px;
+    }
+    .fotoRep {
+        height: 40px;
+        width: 50px;
+    }
+    li.listaR {
+        font-size: 15px;
+        grid-template-columns: 15% 75% 10%;
+    }
+    .detalles,
+    .nombreCancion {
+        margin-left: 10px;
     }
 }
