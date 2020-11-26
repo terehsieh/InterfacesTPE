@@ -111,8 +111,13 @@ a {
     white-space: nowrap;
 }
 
+.navigation ul li .title input {
+    width: 150px;
+}
+
 .navigation ul li button {
-    color: #000000;
+    /* color: #000000; */
+    background-color: #1DB1F0;
     height: 30px;
     position: relative;
     display: block;
@@ -559,9 +564,7 @@ div.explorar {
 /* BUSQUEDAS */
 
 div.filtros {
-    /* padding-left: 100px; */
     display: grid;
-    /* grid-column: auto; */
     grid-template-columns: max-content max-content max-content max-content;
     grid-column-gap: 10px;
     grid-template-rows: auto;
@@ -683,7 +686,7 @@ li.listaR {
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1
+    background-color: rgba(255, 255, 255, 0.4)
 }
 
 .dropdown:hover .dropdown-content {
