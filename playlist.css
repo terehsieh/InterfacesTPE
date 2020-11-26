@@ -8,17 +8,14 @@ body {
     grid-template-columns: 45% 25%;
     grid-template-rows: 20%;
     justify-items: stretch;
-    grid-template-areas:
-        "a a b"
-        "c c c";
+    grid-template-areas: "a a b" "c c c";
 }
 
 .top-left {
     margin-top: 20px;
     grid-area: a;
     display: grid;
-    grid-template-areas:
-        "col1 col2 col2";
+    grid-template-areas: "col1 col2 col2";
 }
 
 .top-left>.col1 {
@@ -30,7 +27,6 @@ body {
 .top-left>.col1:hover .play-hide {
     display: block;
 }
-
 
 .play-hide {
     position: absolute;
@@ -94,13 +90,11 @@ body {
 .opiniones>.usuario {
     margin-left: 2%;
     color: #828282;
-
 }
 
 .opiniones>.opinion {
     margin-left: 3%;
     color: #BDBDBD;
-
 }
 
 .song-list {
@@ -115,12 +109,12 @@ body {
     list-style: none;
     display: grid;
     justify-content: space-evenly;
+    align-items: flex-end;
     margin: 15px;
     background-color: #393939;
     color: #1DB1F0;
     grid-template-columns: 40% 40% 20% 20%;
-    grid-template-areas:
-        "a b c d";
+    grid-template-areas: "a b c d";
 }
 
 .song-list>li .item1 {
@@ -147,7 +141,6 @@ body {
     display: grid;
     display: inline;
     margin-right: 0px;
-
 }
 
 .song-list>li:hover {
