@@ -582,21 +582,38 @@ p.filtro:hover {
     background-color: rgba(255, 255, 255, 0.3);
 }
 
+.cajas {
+    margin-top: 30px;
+}
+
 .resultados {
     padding-top: 80px;
     /* margin: 100px; */
     margin-left: 20%;
 }
 
-.resultados .canciones {
+.canciones {
     margin-top: 30px;
     background-color: rgba(0, 0, 0, 0.3);
     width: 800px;
 }
 
+.fotoArtista {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    grid-area: fotoLista;
+}
+
 .fotoLista {
     width: 80px;
     height: 80px;
+    grid-area: fotoLista;
+}
+
+.fotoRep {
+    width: 80px;
+    height: 60px;
     grid-area: fotoLista;
 }
 
@@ -616,7 +633,7 @@ li.listaR {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     display: grid;
     padding: 10px;
-    grid-template-columns: 15% 40% 45%;
+    grid-template-columns: 15% 60% 25%;
     grid-template-rows: auto;
     grid-template-areas: "fotoLista nombreCancion dropdown" "fotoLista detalles dropdown";
 }
