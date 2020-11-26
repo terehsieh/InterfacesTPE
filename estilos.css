@@ -12,7 +12,7 @@ body {
 }
 
 h1 {
-    margin-top: 40px;
+    padding-top: 40px;
     color: white;
     text-align: center;
 }
@@ -182,7 +182,6 @@ a {
     .navigation {
         left: -60px;
     }
-
     .navigation.active {
         left: 0px;
         width: 100%;
@@ -334,6 +333,7 @@ div.input form .container #togglePassword {
     margin-left: -24%;
 }
 
+
 /* .form {
     display: grid;
     grid-template-columns: 45% 45%;
@@ -369,7 +369,6 @@ div.input form .container #togglePassword {
     background-color: #1DB1F0;
     position: relative;
     margin-left: 90%;
-
 }
 
 
@@ -524,7 +523,7 @@ ul.acordeon div.cont:hover {
 .c3,
 .c4 {
     margin-top: 20px;
-    margin-bottom: ;
+    /* margin-bottom: ; */
 }
 
 .foto {
@@ -557,23 +556,142 @@ div.explorar {
 }
 
 
+/* BUSQUEDAS */
+
+div.filtros {
+    /* padding-left: 100px; */
+    display: grid;
+    /* grid-column: auto; */
+    grid-template-columns: max-content max-content max-content max-content;
+    grid-column-gap: 10px;
+    grid-template-rows: auto;
+    padding-bottom: 20px;
+}
+
+p.filtro {
+    margin-top: 10px;
+    padding: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    width: fit-content;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+p.filtro:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.resultados {
+    padding-top: 80px;
+    /* margin: 100px; */
+    margin-left: 20%;
+}
+
+.resultados .canciones {
+    margin-top: 30px;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 800px;
+}
+
+.fotoLista {
+    width: 80px;
+    height: 80px;
+    grid-area: fotoLista;
+}
+
+.resultados ul {
+    list-style: none;
+}
+
+.nombreCancion {
+    grid-area: nombreCancion;
+}
+
+.detalles {
+    grid-area: detalles;
+}
+
+li.listaR {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    display: grid;
+    padding: 10px;
+    grid-template-columns: 15% 40% 45%;
+    grid-template-rows: auto;
+    grid-template-areas: "fotoLista nombreCancion dropdown" "fotoLista detalles dropdown";
+}
+
+
+/* Dropdown */
+
+.dropdown {
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    grid-area: dropdown;
+    justify-self: end;
+}
+
+.dropbtn {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown button {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content {
+    right: 0;
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
 /* MOBILE */
 
 @media only screen and (max-width: 600px) {
-
     /* NAV */
     /* Playist */
     .playlists .icon {
         visibility: hidden;
     }
-
     .c1,
     .c2,
     .c3,
     .c4 {
         visibility: hidden;
     }
-
     div.explorar {
         width: auto;
         height: auto;
@@ -585,7 +703,13 @@ div.explorar {
         margin: 10px;
         text-align: center;
     }
-
+    /* Carousel */
+    .carouselExampleIndicators,
+    .carousel-inner,
+    .carousel {
+        margin: 0;
+        width: 100%;
+    }
     /* PLANES */
     div.cards {
         margin-left: 50px;
@@ -596,13 +720,11 @@ div.explorar {
         grid-template-rows: auto;
         grid-template-areas: "card4""card3""card2""card1";
     }
-
     div.card {
         height: auto;
         margin: 10px;
         padding: 5px;
     }
-
     /* Q & A */
     div.acordeon {
         padding-top: 70px;
@@ -611,7 +733,6 @@ div.explorar {
         padding-right: 5%;
         font-size: 15px;
     }
-
     div.acordeon li {
         /* padding-top: 10px;
         padding-bottom: 10px;
@@ -622,12 +743,10 @@ div.explorar {
         text-align: start;
         font-size: 15px;
     }
-
     ul.acordeon div.cont {
         padding: 0;
         margin: 5px;
     }
-
     /* FORMULARIOS, Registrar */
     .form {
         padding: 0;
@@ -636,11 +755,9 @@ div.explorar {
         height: auto;
         width: auto;
     }
-
     div.input {
         margin-top: 20px;
     }
-
     div.input input#texto1,
     div.input input#texto2,
     div.input input#texto3 {

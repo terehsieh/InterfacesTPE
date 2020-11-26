@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busquedas</title>
+    <!-- icon -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <header>
+        <!-- https://www.youtube.com/watch?v=DvpSKoCyN5Q -->
+        <div class="navigation">
+            <ul>
+                <li><span class="icon"><i class="fa fa-search" aria-hidden="true"></i></span><span class="title"><input type="text" ></span> <button>Buscar</button></li>
+                <li><a href="home.html"><span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span><span class="title">Home</span></a></li>
+                <li><a href="perfil.html"><span class="icon"><i class="fa fa-user" aria-hidden="true"></i></span><span class="title">Perfil</span></a></li>
+                <li><a href=""><span class="icon"><i class="fa fa-heart" aria-hidden="true"></i></span><span class="title">Favoritos</span></a></li>
+                <li><a href=""><span class="icon"><i class="fa fa-music" aria-hidden="true"></i></span><span class="title">Mis playlist</span></a></li>
+                <li><a href=""><span class="icon"><i class="fa fa-podcast" aria-hidden="true"></i></span><span class="title">Mis posdcast</span></a></li>
+                <li><a href=""><span class="icon"><i class="fa fa-cogs" aria-hidden="true"></i></span><span class="title">Configuración</span></a></li>
+                <li><a href=""><span class="icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span><span class="title">Cerrar session</span></a></li>
+                <li><a href="faq.html"><span class="icon"><i class="fa fa-question-circle" aria-hidden="true"></i></span><span class="title">Q & A</span></a></li>
+            </ul>
+        </div>
+
+        <div class="toggle" onclick='toggleMenu()'>
+
+        </div>
+        <script>
+            function toggleMenu() {
+                console.log("entro")
+                let navigation = document.querySelector('.navigation ');
+                navigation.classList.toggle('active');
+                let toggle = document.querySelector('.toggle ');
+                toggle.classList.toggle('active ');
+            }
+        </script>
+    </header>
+    <!-- <h1>Resultado de busqueda: "Avici"</h1> -->
+
+
+
+    <div class="resultados">
+        <div class="filtros">
+            <p class="filtro">Canciones</p>
+            <p class="filtro">Lista de reproduccion</p>
+            <p class="filtro">Artista</p>
+            <p class="filtro">Álbumes</p>
+        </div>
+        Mostrando resultados de: " Avicii "
+        <div class="canciones">
+            <ul>
+
+                <li class="listaR">
+                    <img class="fotoLista" src="img/avici.jpg" alt="">
+                    <p class="nombreCancion">Wake me up</p>
+                    <p class="detalles">Avicii · True · 4:08</p>
+                    <div class="dropdown">
+                        <button class="dropbtn"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                </li>
+                <li class="listaR">
+                    <img class="fotoLista" src="img/gg.jpg" alt="">
+                    <p class="nombreCancion">The Nights</p>
+                    <p class="detalles">Avicii · The Days / Nights (EP) · 2:57
+                    </p>
+                    <div class="dropdown">
+                        <button class="dropbtn"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                </li>
+                <li class="listaR">
+                    <img class="fotoLista" src="img/avici1.jpg" alt="">
+                    <p class="nombreCancion">For A Better Day</p>
+                    <p class="detalles">Avicii · Stories · 3:27
+                    </p>
+                    <div class="dropdown">
+                        <button class="dropbtn"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                </li>
+                <li class="listaR">
+                    <img class="fotoLista" src="img/avici1.jpg" alt="">
+                    <p class="nombreCancion">Waiting For Love</p>
+                    <p class="detalles">Avicii · Stories · 3:51
+                    </p>
+                    <div class="dropdown">
+                        <button class="dropbtn"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                </li>
+            </ul>
+
+            </div>
+            </div>
+            <!-- bootstrap -->
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
