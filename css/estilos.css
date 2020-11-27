@@ -728,6 +728,26 @@ div.explorar {
     margin-left: 0px;
     width: 234px;
     height: 30px;
+    display: grid;
+    grid-template-areas: "a a a a b";
+}
+
+.btn-calificar p {
+    grid-area: a;
+    justify-content: center;
+    margin-top: 0px;
+    color: #BDBDBD;
+}
+
+#flecha {
+    grid-area: b;
+    justify-content: end;
+}
+
+#texto-usu {
+    background-color: #393939;
+    opacity: 20%;
+    margin-left: 5px;
 }
 
 .dropdown-menu {
@@ -755,8 +775,14 @@ div.explorar {
     justify-items: end;
 }
 
+.top-left>.col1 img:hover {
+    opacity: 40%;
+}
+
 .top-left>.col1:hover .play-hide {
     display: block;
+    opacity: 100%;
+
 }
 
 .playlist-icons {
@@ -774,8 +800,9 @@ div.explorar {
     position: absolute;
     transform: scale(3.5);
     margin-top: 7%;
-    margin-left: 500px;
+    padding-left: 5.3%;
     display: none;
+
 }
 
 .top-left>.col2 {
@@ -837,15 +864,31 @@ div.explorar {
 
 .opiniones>div {
     display: grid;
-    grid-template-areas: "usu usu usu icono";
+    grid-template-columns: 97% 3%;
+    grid-template-areas: "usu icono";
 }
 
 .icons-usuario {
     margin-top: 10px;
     grid-area: icono;
     justify-items: right;
+}
+
+.star-like {
     display: grid;
-    grid-template-areas: "stars ico1 ico2";
+    grid-template-columns: 80% 20%;
+    grid-template-areas: "space icons";
+}
+
+.star-like>i {
+    grid-area: icons;
+    color: #828282;
+    display: grid;
+    grid-template-areas: "star like";
+}
+
+.star-like>i fa-star {
+    grid-area: star;
 }
 
 .icons-usuario>i {
@@ -921,7 +964,7 @@ div.explorar {
 }
 
 .song-list>li:hover {
-    transform: scale(1.007);
+    transform: scale(1.025);
     transition-delay: 2.5s ease-in;
     color: #252525;
     background-color: #2a6f8d;
@@ -1103,8 +1146,8 @@ li.listaR {
     position: absolute;
     background-color: #2E2E2E;
     min-width: 200px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+
+    z-index: 2;
 }
 
 .dropdown-content a,
@@ -1113,7 +1156,9 @@ li.listaR {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    background-color: rgba(0, 0, 0, 1);
 }
+
 
 .dropdown-content a:hover,
 .dropup-content a:hover {
@@ -1166,6 +1211,11 @@ li.listaR {
         margin-top: 20px;
         width: 170px;
         height: 170px;
+    }
+
+    .top-left>.col1:hover .play-hide {
+        visibility: hidden;
+        opacity: none;
     }
 
     .col2 {
