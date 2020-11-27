@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Busquedas</title>
     <!-- icon -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 
@@ -16,21 +17,21 @@
         <div class="navigation">
             <ul>
                 <li><span class="icon"><i class="fa fa-search" aria-hidden="true"></i></span><span class="title"><input
-                            type="text"></span> <button>Buscar</button></li>
+                            type="text"></span> <button onclick="window.location='busquedas.html';">Buscar</button></li>
                 <li><a href="home.html"><span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span><span
                             class="title">Home</span></a></li>
                 <li><a href="perfil.html"><span class="icon"><i class="fa fa-user" aria-hidden="true"></i></span><span
                             class="title">Perfil</span></a></li>
-                <li><a href=""><span class="icon"><i class="fa fa-heart" aria-hidden="true"></i></span><span
-                            class="title">Favoritos</span></a></li>
-                <li><a href=""><span class="icon"><i class="fa fa-music" aria-hidden="true"></i></span><span
-                            class="title">Mis playlist</span></a></li>
+                <li><a href="favoritos.html"><span class="icon"><i class="fa fa-heart"
+                                aria-hidden="true"></i></span><span class="title">Favoritos</span></a></li>
+                <li><a href="playlists.html"><span class="icon"><i class="fa fa-music"
+                                aria-hidden="true"></i></span><span class="title">Mis playlist</span></a></li>
                 <li><a href=""><span class="icon"><i class="fa fa-podcast" aria-hidden="true"></i></span><span
                             class="title">Mis posdcast</span></a></li>
                 <li><a href=""><span class="icon"><i class="fa fa-cogs" aria-hidden="true"></i></span><span
                             class="title">Configuración</span></a></li>
-                <li><a href=""><span class="icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span><span
-                            class="title">Cerrar session</span></a></li>
+                <li><a href="home1.html"><span class="icon"><i class="fa fa-sign-out"
+                                aria-hidden="true"></i></span><span class="title">Cerrar session</span></a></li>
                 <li><a href="faq.html"><span class="icon"><i class="fa fa-question-circle"
                                 aria-hidden="true"></i></span><span class="title">Q & A</span></a></li>
             </ul>
@@ -78,193 +79,241 @@
                             </div>
                     </li>
                 </ul>
-                </div>
+            </div>
+        </div>
+
+        <div class="cajas">
+            <h2>Canciones</h2>
+
+            <div class="canciones">
+                <ul>
+                    <li class="listaR">
+                        <img class="fotoLista" src="img/avici.jpg" alt="">
+                        <p class="nombreCancion">Wake me up</p>
+                        <p class="detalles">Avicii · True · 4:08</p>
+                        <div class="dropdown">
+                            <button class="dropbtn"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
+                            <div class="dropdown-content">
+                                <a href="#">Añadir a la cola</a>
+                                <a href="#">Agregar a playlist</a>
+
+                                <a href="#">Ir al artista</a>
+                                <a href="#">Ir al album</a>
+                                <a href="#">Compartir</a>
+                                <a href="#">Descargar</a>
+                            </div>
+                    </li>
+                    <li class="listaR">
+                        <img class="fotoLista" src="img/gg.jpg" alt="">
+                        <p class="nombreCancion">The Nights</p>
+                        <p class="detalles">Avicii · The Days / Nights (EP) · 2:57
+                        </p>
+                        <div class="dropdown">
+                            <button class="dropbtn"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
+                            <div class="dropdown-content">
+                                <a href="#">Añadir a la cola</a>
+                                <a href="#">Agregar a playlist</a>
+
+                                <a href="#">Ir al artista</a>
+                                <a href="#">Ir al album</a>
+                                <a href="#">Compartir</a>
+                                <a href="#">Descargar</a>
+                            </div>
+                    </li>
+                    <li class="listaR">
+                        <img class="fotoLista" src="img/avici1.jpg" alt="">
+                        <p class="nombreCancion">For A Better Day</p>
+                        <p class="detalles">Avicii · Stories · 3:27
+                        </p>
+                        <div class="dropdown">
+                            <button class="dropbtn"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
+                            <div class="dropdown-content">
+                                <a href="#">Añadir a la cola</a>
+                                <a href="#">Agregar a playlist</a>
+
+                                <a href="#">Ir al artista</a>
+                                <a href="#">Ir al album</a>
+                                <a href="#">Compartir</a>
+                                <a href="#">Descargar</a>
+                            </div>
+                    </li>
+                    <li class="listaR">
+                        <img class="fotoLista" src="img/avici1.jpg" alt="">
+                        <p class="nombreCancion">Waiting For Love</p>
+                        <p class="detalles">Avicii · Stories · 3:51
+                        </p>
+                        <div class="dropdown">
+                            <button class="dropbtn"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
+                            <div class="dropdown-content">
+                                <a href="#">Link 1</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                            </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="cajas">
+            <h2>Listas de reproducción</h2>
+
+            <div class="canciones">
+                <ul>
+
+                    <li class="listaR" onclick="window.location='playlist.html';">
+                        <img class="fotoRep" src="img/maxresdefault.jpg" alt="">
+                        <p class="nombreCancion">Avicii playlist - BEST songs</p>
+                        <p class="detalles">Lista de reproducción · Radio Golcack · 33 canciones</p>
+                        <div class="dropdown">
+                            <button class="dropbtn"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
+                            <div class="dropdown-content">
+                                <a href="#">Reproduccion aleatoria</a>
+                                <a href="#">Agregar a lista de reproducción</a>
+                                <a href="#">Quitar a lista de reproducción</a>
+                                <a href="#">Eliminar de Favoritos</a>
+
+                                <a href="#">Compartir</a>
+
+                            </div>
+                    </li>
+                    <li class="listaR" onclick="window.location='playlist.html';">
+                        <img class="fotoRep" src="img/1692566-avicii_edmsaucex-1524422120.jpg" alt="">
+                        <p class="nombreCancion">Avicii Hits</p>
+                        <p class="detalles">Lista de reproducción · Quique Garduno · 40 canciones
+                        </p>
+                        <div class="dropdown">
+                            <button class="dropbtn"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
+                            <div class="dropdown-content">
+                                <a href="#">Link 1</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                            </div>
+                    </li>
+                    <li class="listaR" onclick="window.location='playlist.html';">
+                        <img class="fotoRep" src="img/mix.jpg" alt="">
+                        <p class="nombreCancion">Avicii Mix</p>
+                        <p class="detalles">Lista de reproducción · arronb01 · 20 canciones
+                        </p>
+                        <div class="dropdown">
+                            <button class="dropbtn"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
+                            <div class="dropdown-content">
+                                <a href="#">Link 1</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                            </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="cajas">
+            <h2>Álbumes</h2>
+
+            <div class="canciones">
+                <ul>
+
+                    <li class="listaR">
+                        <img class="fotoLista" src="img/avici1.jpg" alt="">
+                        <p class="nombreCancion">Stories</p>
+                        <p class="detalles">Álbum · Avicii ·2015</p>
+                        <div class="dropdown">
+                            <button class="dropbtn"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
+                            <div class="dropdown-content">
+                                <a href="#">Reproduccion aleatoria</a>
+                                <a href="#">Agregar album a la biblioteca</a>
+                                <a href="#">Eliminar de Favoritos</a>
+                                <a href="#">Ir al Artista</a>
+                                <a href="#">Compartir</a>
+                            </div>
+                    </li>
+                    <li class="listaR">
+                        <img class="fotoLista" src="img/tim.jpg" alt="">
+                        <p class="nombreCancion">TIM</p>
+                        <p class="detalles">Álbum · Avicii ·2019
+                        </p>
+                        <div class="dropdown">
+                            <button class="dropbtn"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
+                            <div class="dropdown-content">
+                                <a href="#">Link 1</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                            </div>
+                    </li>
+                    <li class="listaR">
+                        <img class="fotoLista" src="img/unnamed.jpg" alt="">
+                        <p class="nombreCancion">
+                            AVĪCI (01)</p>
+                        <p class="detalles">Álbum · Avicii ·2017
+                        </p>
+                        <div class="dropdown">
+                            <button class="dropbtn"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
+                            <div class="dropdown-content">
+                                <a href="#">Link 1</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                            </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <!-- bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="js/script.js"></script>
+    <footer>
+        <div class="reproductor">
+            <img class="foto" src="img/avici1.jpg" alt="">
+            <div>
+                <p class="cancion">Wake me up</p>
+                <p class="artista">Avicii</p>
             </div>
 
-            <div class="cajas">
-                <h2>Canciones</h2>
-
-                <div class="canciones">
-                    <ul>
-                        <li class="listaR">
-                            <img class="fotoLista" src="img/avici.jpg" alt="">
-                            <p class="nombreCancion">Wake me up</p>
-                            <p class="detalles">Avicii · True · 4:08</p>
-                            <div class="dropdown">
-                                <button class="dropbtn"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
-                                <div class="dropdown-content">
-                                    <a href="#">Añadir a la cola</a>
-                                    <a href="#">Agregar a playlist</a>
-
-                                    <a href="#">Ir al artista</a>
-                                    <a href="#">Ir al album</a>
-                                    <a href="#">Compartir</a>
-                                    <a href="#">Descargar</a>
-                                </div>
-                        </li>
-                        <li class="listaR">
-                            <img class="fotoLista" src="img/gg.jpg" alt="">
-                            <p class="nombreCancion">The Nights</p>
-                            <p class="detalles">Avicii · The Days / Nights (EP) · 2:57
-                            </p>
-                            <div class="dropdown">
-                                <button class="dropbtn"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
-                                <div class="dropdown-content">
-                                    <a href="#">Añadir a la cola</a>
-                                    <a href="#">Agregar a playlist</a>
-
-                                    <a href="#">Ir al artista</a>
-                                    <a href="#">Ir al album</a>
-                                    <a href="#">Compartir</a>
-                                    <a href="#">Descargar</a>
-                                </div>
-                        </li>
-                        <li class="listaR">
-                            <img class="fotoLista" src="img/avici1.jpg" alt="">
-                            <p class="nombreCancion">For A Better Day</p>
-                            <p class="detalles">Avicii · Stories · 3:27
-                            </p>
-                            <div class="dropdown">
-                                <button class="dropbtn"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
-                                <div class="dropdown-content">
-                                    <a href="#">Añadir a la cola</a>
-                                    <a href="#">Agregar a playlist</a>
-
-                                    <a href="#">Ir al artista</a>
-                                    <a href="#">Ir al album</a>
-                                    <a href="#">Compartir</a>
-                                    <a href="#">Descargar</a>
-                                </div>
-                        </li>
-                        <li class="listaR">
-                            <img class="fotoLista" src="img/avici1.jpg" alt="">
-                            <p class="nombreCancion">Waiting For Love</p>
-                            <p class="detalles">Avicii · Stories · 3:51
-                            </p>
-                            <div class="dropdown">
-                                <button class="dropbtn"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
-                                <div class="dropdown-content">
-                                    <a href="#">Link 1</a>
-                                    <a href="#">Link 2</a>
-                                    <a href="#">Link 3</a>
-                                </div>
-                        </li>
-                    </ul>
-
+            <p class="type">Canción</p>
+            <span class="heart"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+            <div class="opciones">
+                <div class="dropup">
+                    <button class="dropbtn">Opciones</button>
+                    <div class="dropup-content">
+                        <a href="#">Agregar a la playlist</a>
+                        <a href="#">Descargar</a>
+                        <a href="#">Opinar</a>
+                        <a href="#">Obtener enlace</a>
                     </div>
+                </div>
+            </div>
+            <div class="player"> <i class="fa fa-step-backward" aria-hidden="true"></i><i class="fa fa-play-circle-o"
+                    style="color:#1db1f0" aria-hidden="true"></i><i class="fa fa-step-forward" aria-hidden="true"></i>
+            </div>
+            <div class="star">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+            </div>
+            <div class="volume"><i class="fa fa-volume-up" aria-hidden="true"></i> <input class="range" type="range">
+            </div>
+            <div class="playlist">
+                <div class="dropup">
+                    <button class="dropbtn"><i class="fa fa-list" aria-hidden="true"></i></button>
+                    <div class="dropup-content" id="playlist">
+                        <a class="active" href="#">Wake me up · Avicii · 4:08 </a>
+                        <a href="#">The Nights · Avicii · 2:57 </a>
+                        <a href="#">For A Better Day · Avicii · 3:27</a>
                     </div>
-                    <div class="cajas">
-                        <h2>Listas de reproducción</h2>
-
-                        <div class="canciones">
-                            <ul>
-
-                                <li class="listaR" onclick="window.location='playlist.html';">
-                                    <img class="fotoRep" src="img/maxresdefault.jpg" alt="">
-                                    <p class="nombreCancion">Avicii playlist - BEST songs</p>
-                                    <p class="detalles">Lista de reproducción · Radio Golcack · 33 canciones</p>
-                                    <div class="dropdown">
-                                        <button class="dropbtn"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
-                                        <div class="dropdown-content">
-                                            <a href="#">Reproduccion aleatoria</a>
-                                            <a href="#">Agregar a lista de reproducción</a>
-                                            <a href="#">Quitar a lista de reproducción</a>
-                                            <a href="#">Eliminar de Favoritos</a>
-
-                                            <a href="#">Compartir</a>
-
-                                        </div>
-                                </li>
-                                <li class="listaR" onclick="window.location='playlist.html';">
-                                    <img class="fotoRep" src="img/1692566-avicii_edmsaucex-1524422120.jpg" alt="">
-                                    <p class="nombreCancion">Avicii Hits</p>
-                                    <p class="detalles">Lista de reproducción · Quique Garduno · 40 canciones
-                                    </p>
-                                    <div class="dropdown">
-                                        <button class="dropbtn"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
-                                        <div class="dropdown-content">
-                                            <a href="#">Link 1</a>
-                                            <a href="#">Link 2</a>
-                                            <a href="#">Link 3</a>
-                                        </div>
-                                </li>
-                                <li class="listaR" onclick="window.location='playlist.html';">
-                                    <img class="fotoRep" src="img/mix.jpg" alt="">
-                                    <p class="nombreCancion">Avicii Mix</p>
-                                    <p class="detalles">Lista de reproducción · arronb01 · 20 canciones
-                                    </p>
-                                    <div class="dropdown">
-                                        <button class="dropbtn"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
-                                        <div class="dropdown-content">
-                                            <a href="#">Link 1</a>
-                                            <a href="#">Link 2</a>
-                                            <a href="#">Link 3</a>
-                                        </div>
-                                </li>
-                            </ul>
-
-                            </div>
-                            </div>
-                            <div class="cajas">
-                                <h2>Álbumes</h2>
-
-                                <div class="canciones">
-                                    <ul>
-
-                                        <li class="listaR">
-                                            <img class="fotoLista" src="img/avici1.jpg" alt="">
-                                            <p class="nombreCancion">Stories</p>
-                                            <p class="detalles">Álbum · Avicii ·2015</p>
-                                            <div class="dropdown">
-                                                <button class="dropbtn"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
-                                                <div class="dropdown-content">
-                                                    <a href="#">Reproduccion aleatoria</a>
-                                                    <a href="#">Agregar album a la biblioteca</a>
-                                                    <a href="#">Eliminar de Favoritos</a>
-                                                    <a href="#">Ir al Artista</a>
-                                                    <a href="#">Compartir</a>
-                                                </div>
-                                        </li>
-                                        <li class="listaR">
-                                            <img class="fotoLista" src="img/tim.jpg" alt="">
-                                            <p class="nombreCancion">TIM</p>
-                                            <p class="detalles">Álbum · Avicii ·2019
-                                            </p>
-                                            <div class="dropdown">
-                                                <button class="dropbtn"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
-                                                <div class="dropdown-content">
-                                                    <a href="#">Link 1</a>
-                                                    <a href="#">Link 2</a>
-                                                    <a href="#">Link 3</a>
-                                                </div>
-                                        </li>
-                                        <li class="listaR">
-                                            <img class="fotoLista" src="img/unnamed.jpg" alt="">
-                                            <p class="nombreCancion">
-                                                AVĪCI (01)</p>
-                                            <p class="detalles">Álbum · Avicii ·2017
-                                            </p>
-                                            <div class="dropdown">
-                                                <button class="dropbtn"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
-                                                <div class="dropdown-content">
-                                                    <a href="#">Link 1</a>
-                                                    <a href="#">Link 2</a>
-                                                    <a href="#">Link 3</a>
-                                                </div>
-                                        </li>
-                                    </ul>
-
-                                    </div>
-                                    </div>
-                                    </div>
-                                    <!-- bootstrap -->
-                                    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-                                    </script>
-                                    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-                                    </script>
-                                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-                                    </script>
-                                    <script src="js/script.js"></script>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
