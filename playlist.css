@@ -37,6 +37,8 @@ body {
 }
 
 .top-left>.col2 {
+    margin-top: 20px;
+    margin-left: 30px;
     grid-area: col2;
     justify-items: start;
 }
