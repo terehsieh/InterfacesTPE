@@ -595,7 +595,6 @@ ul.acordeon div {
 }
 
 ul.acordeon div.cont:hover {
-
     transform-style: preserve-3d;
     transform: scale(1.06);
     width: auto;
