@@ -35,10 +35,39 @@ button {
 div.contenedor {
     display: grid;
     grid-template-columns: 65% 30%;
-    grid-template-rows: 45%;
+    grid-template-rows: 35% 60%;
     grid-column-gap: 60px;
-    grid-row-gap: 10px;
+    grid-row-gap: 60px;
     grid-template-areas: "carousel propaganda""explorar propaganda";
+}
+
+#c1 {
+    border-bottom: 3px solid #1db1f0;
+}
+
+.tipos {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 20% 23% 23% 23% 23%;
+    grid-area: tipos;
+    /* overflow: auto; */
+}
+
+.tipo {
+    width: auto;
+    height: 58px;
+    margin: 3px;
+    text-align: center;
+    align-items: center;
+}
+
+.tipo.tipoA {
+    padding-top: 15px;
+}
+
+.tipo:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 
@@ -637,51 +666,8 @@ ul.acordeon div.cont:hover {
 
 /* PLAYLIST */
 
-.titulo {
-    grid-area: titulo;
-}
-
-.c1 {
-    grid-area: sub1;
-    border-bottom: 3px solid #1db1f0;
-}
-
-.c1 p {
-    margin: 0;
-    padding: 0;
-}
-
-.c2 {
-    grid-area: sub2;
-    padding-top: 20px;
-}
-
-.c3 {
-    grid-area: sub3;
-}
-
-.c4 {
-    grid-area: sub4;
-}
-
-.titulo,
-.c1,
-.c2,
-.c3,
-.c4 {
-    margin-top: 20px;
-}
-
-.c1:hover,
-.c2:hover,
-.c3:hover,
-.c4:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
-}
-
-.foto {
-    grid-area: foto;
+.cancion {
+    grid-area: cancion;
 }
 
 .playlists {
@@ -692,17 +678,18 @@ ul.acordeon div.cont:hover {
 div.explorar {
     margin: 0;
     padding: 0;
-    margin-top: 10px;
+    margin-top: 5px;
     margin-left: 90px;
     width: 750px;
     height: 350px;
     display: grid;
-    grid-template-columns: 30% 16% 16% 16% 16%;
-    grid-template-rows: auto;
+    grid-template-columns: 90%;
+    grid-template-rows: max-content;
+    grid-column-gap: 10px;
     /* grid-template-areas: "titulo sub1 sub2 sub3 sub4""foto playlists playlists playlists playlists"; */
-    grid-template-areas: "titulo sub1 sub2 sub3 sub4""foto c c c c";
+    grid-template-areas: "tipos" "cajas";
     background-color: rgba(33, 33, 33, 0.5);
-    text-align: center;
+    /* text-align: center; */
     grid-area: explorar;
 }
 
@@ -884,13 +871,48 @@ p.filtro:hover {
 }
 
 .cajas {
-    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .resultados {
     padding-top: 80px;
     /* margin: 100px; */
     margin-left: 20%;
+}
+
+
+/* Explorar */
+
+.cancionX {
+    /* margin-top: 30px; */
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 250px;
+    margin-left: 20px;
+    overflow: auto;
+}
+
+.cancionX ul {
+    height: 200px;
+}
+
+.cancionX .listaR {
+    /* margin: 0; */
+    height: 60px;
+    font-size: 15px;
+    /* line-height: 10px; */
+}
+
+.cancionX .listaR .nombreCancion {
+    margin: 0;
+}
+
+.cancionX .fotoLista {
+    /* margin: 10px; */
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    grid-area: fotoLista;
 }
 
 .canciones {
@@ -1032,17 +1054,11 @@ li.listaR {
     .playlists .icon {
         visibility: hidden;
     }
-    .c1,
-    .c2,
-    .c3,
-    .c4 {
-        visibility: hidden;
-    }
     div.explorar {
         width: auto;
-        height: auto;
+        height: max-content;
         display: grid;
-        grid-template-columns: 95%;
+        grid-template-columns: 100%;
         grid-template-rows: auto;
         grid-template-areas: "titulo""foto""playlists";
         background-color: rgba(33, 33, 33, 0.3);
@@ -1061,7 +1077,7 @@ li.listaR {
     div.container {
         margin: 0;
         grid-template-columns: 100%;
-        grid-template-rows: auto;
+        grid-template-rows: max-content;
         grid-template-areas: "a" "c" "b";
         font-size: 15px;
     }
@@ -1077,12 +1093,17 @@ li.listaR {
         margin: 0;
         padding: 0;
     }
+    .propaganda {
+        visibility: hidden;
+    }
     /* HOME */
-    .contenedor {
+    div.contenedor {
+        width: 100%;
+        padding-top: 100px;
         display: grid;
-        grid-template-columns: 95%;
+        grid-template-columns: 100%;
         grid-template-rows: auto;
-        grid-template-areas: "carousel" "explorar" "propaganda";
+        grid-template-areas: "carousel" "explorar";
     }
     /* Carousel */
     .carouselExampleIndicators,
@@ -1090,6 +1111,20 @@ li.listaR {
     .carousel {
         margin: 0;
         width: 100%;
+    }
+    .explorar .tipos {
+        width: 100%;
+        /* visibility: visible; */
+        /* height: 100%; */
+        overflow: auto;
+    }
+    .cajas {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .cancionX {
+        margin: 0;
     }
     /* PLANES */
     div.cards {
@@ -1176,4 +1211,5 @@ li.listaR {
     h1 {
         padding-top: 100px;
     }
+    /* nav */
 }
