@@ -349,10 +349,12 @@ footer {
     margin-left: 20px;
     margin-right: 20px;
     font-size: 25px;
+    padding-bottom: 15px;
 }
 
 .reproductor .player i.fa-play-circle-o {
     font-size: 40px;
+    padding-top: 7px;
 }
 
 
@@ -380,7 +382,7 @@ input.range {
     display: grid;
     align-items: center;
     justify-items: start;
-    grid-template-columns: 6% 10% 5% 5% 10% 20% 10% 15% 5%;
+    grid-template-columns: 6% 10% 5% 5% 9% 20% 10% 15% 10%;
     grid-template-rows: auto;
     grid-column-gap: 20px;
     grid-template-areas: "fotoR cancion type heart opciones player star volume playlist""fotoR artista type heart opciones player star volume playlist"
@@ -614,6 +616,7 @@ ul.acordeon div.cont:hover {
 
 .cards {
     margin-top: 50px;
+    padding-left: 7%;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: auto;
@@ -632,6 +635,8 @@ ul.acordeon div.cont:hover {
     border-radius: 30px;
     background-color: #1DB1F0;
 }
+
+.card button {}
 
 .card .price {
     margin-top: 10px;
@@ -679,6 +684,7 @@ ul.acordeon div.cont:hover {
 
 .cancion {
     grid-area: cancion;
+    padding-top: 10px;
 }
 
 .playlists {
@@ -968,6 +974,32 @@ p.filtro:hover {
 }
 
 
+/* Animaciones */
+
+.canciones.show {
+    animation: show_slide 5s ease forwards;
+}
+
+.canciones.hide {
+    display: none;
+}
+
+@keyframes show_slide {
+    0% {
+        transform: translateX(100%);
+    }
+    40% {
+        transform: translateX(-10%);
+    }
+    80% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+
 /* Explorar */
 
 .cancionX {
@@ -1092,6 +1124,8 @@ li.listaR {
     font-size: 16px;
     border: none;
     cursor: pointer;
+    width: max-content;
+    margin: 0;
 }
 
 .dropdown,
@@ -1229,11 +1263,13 @@ li.listaR {
     }
     /* PLANES */
     div.cards {
-        margin-left: 50px;
+        margin: 0;
+        margin: 10px;
+        padding-left: 10px;
         width: auto;
         height: auto;
         display: grid;
-        grid-template-columns: 90%;
+        grid-template-columns: 100%;
         grid-template-rows: auto;
         grid-template-areas: "card4""card3""card2""card1";
     }

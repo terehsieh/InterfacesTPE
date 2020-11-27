@@ -1,6 +1,18 @@
 //ACORDEON
 
 document.addEventListener("DOMContentLoaded", () => {
+
+    setTimeout(function() {
+        console.log("funcionaaa")
+        let canciones = document.querySelectorAll(".canciones");
+        canciones.forEach(element => {
+            element.classList.remove('hide');
+            element.classList.add('show');
+
+        });
+        // document.querySelectorAll(".canciones").classList.remove('hide');
+        // document.querySelectorAll(".canciones").classList.add('show');
+    }, 1000);
     //acordion
     let lis = document.querySelectorAll("ul.acordeon li");
     lis.forEach(li => {
@@ -22,6 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
         // toggle the eye slash icon
         this.classList.toggle('fa-eye-slash');
     });
+
+
+    // document.querySelector(".cajas").classList.remove('hide');;
 
 
 });
