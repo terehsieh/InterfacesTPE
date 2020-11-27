@@ -237,6 +237,7 @@ div.contenedor {
     .navigation {
         left: -60px;
     }
+
     .navigation.active {
         left: 0px;
         width: 100%;
@@ -342,7 +343,7 @@ input.range {
     grid-template-columns: 6% 10% 5% 5% 10% 20% 10% 15% 5%;
     grid-template-rows: auto;
     grid-column-gap: 20px;
-    grid-template-areas: "fotoR cancion type heart opciones player star volume playlist" "fotoR artista type heart opciones player star volume playlist"
+    grid-template-areas: "fotoR cancion type heart opciones player star volume playlist""fotoR artista type heart opciones player star volume playlist"
 }
 
 .reproductor img.foto {
@@ -714,13 +715,13 @@ div.explorar {
 
 
 /* Playlist */
-
 .container {
     display: grid;
-    grid-template-columns: 45% 25%;
+    grid-template-columns: 2;
     grid-template-rows: 20%;
     justify-items: stretch;
-    grid-template-areas: "a a b" "c c c";
+    grid-template-areas: "a b"
+        "c c";
 }
 
 .top-left {
@@ -728,6 +729,35 @@ div.explorar {
     grid-area: a;
     display: grid;
     grid-template-areas: "col1 col2 col2";
+}
+
+.btn-calificar {
+    background-color: #828282;
+    color: #BDBDBD;
+    border-radius: 10px;
+    margin-left: 0px;
+    width: 234px;
+    height: 30px;
+
+}
+
+.dropdown-menu {
+    background-color: #828282;
+}
+
+.dropdown-item:hover {
+    color: #BDBDBD;
+    background-color: #828282;
+}
+
+.stars-voted-user>i {
+    margin-left: 15px;
+    justify-self: stretch;
+    color: black;
+}
+
+.stars-voted-user>i:hover {
+    color: yellow;
 }
 
 .top-left>.col1 {
@@ -740,11 +770,23 @@ div.explorar {
     display: block;
 }
 
+.playlist-icons {
+    display: grid;
+    margin-top: 20px;
+    margin-left: 20%;
+    grid-template-areas: "a b c";
+}
+
+.playlist-icons>i {
+    color: #828282;
+}
+
+
 .play-hide {
     position: absolute;
-    transform: scale(1.5);
-    margin-left: 14%;
+    transform: scale(3.5);
     margin-top: 7%;
+    margin-left: 500px;
     display: none;
 }
 
@@ -774,6 +816,7 @@ div.explorar {
 
 .top-right {
     grid-area: b;
+    margin-top: 3%;
     background-color: #2E2E2E;
     stroke-width: 2px;
     border-radius: 5px;
@@ -782,12 +825,21 @@ div.explorar {
 }
 
 .top-right>.playlist-subtittle {
-    margin-top: 0;
+    position: absolute;
+    margin-top: 0%;
+    background-color: #2E2E2E;
+    width: 35%;
     color: #BDBDBD;
 }
 
+
+.comentarios {
+    margin-top: 35px;
+}
+
 .opiniones {
-    padding: 10px;
+    padding: 5px;
+    margin-bottom: 20px;
     border-radius: 7px;
     background-color: #393939;
     font-weight: 500;
@@ -796,11 +848,35 @@ div.explorar {
     letter-spacing: 0.13555px;
 }
 
-.opiniones>.usuario {
+.opiniones>div {
+    display: grid;
+    grid-template-areas: "usu usu usu icono";
+}
+
+.icons-usuario {
+    margin-top: 10px;
+    grid-area: icono;
+    justify-items: right;
+    display: grid;
+    grid-template-areas: "stars ico1 ico2";
+}
+
+.icons-usuario>i {
+    color: #828282;
+}
+
+.fa-thumbs-o-up:active {
+    transform: scale(2.0);
+    color: #1DB1F0;
+}
+
+.opiniones .usuario {
+    grid-area: usu;
     color: #828282;
 }
 
 .opiniones>.opinion {
+    margin-top: -15px;
     color: #BDBDBD;
 }
 
@@ -810,7 +886,6 @@ div.explorar {
     margin-top: 10px;
     height: 100%;
     overflow: auto;
-    overflow-x: hidden;
 }
 
 .song-list>li {
@@ -823,6 +898,7 @@ div.explorar {
     color: #1DB1F0;
     grid-template-columns: 45% 35% 10% 10%;
     grid-template-areas: "a b c d";
+    cursor: pointer;
 }
 
 .song-list>li .item1 {
@@ -832,23 +908,29 @@ div.explorar {
     justify-items: left;
 }
 
+.song-list>li .item1:hover {
+    color: #1DB1F0;
+}
+
 .song-list>li .item2 {
     grid-area: b;
     display: grid;
     justify-items: left;
 }
 
+.song-list>li .item2:hover {
+    color: #1DB1F0;
+}
+
 .song-list>li .item3 {
     grid-area: c;
     display: grid;
-    justify-items: left;
+    justify-items: end;
 }
 
 .song-list>li .item4 {
     grid-area: d;
     display: grid;
-    display: inline;
-    margin-right: 0px;
 }
 
 .song-list>li:hover {
@@ -937,7 +1019,7 @@ li.listaR {
     padding: 10px;
     grid-template-columns: 15% 60% 25%;
     grid-template-rows: auto;
-    grid-template-areas: "fotoLista nombreCancion dropdown" "fotoLista detalles dropdown";
+    grid-template-areas: "fotoLista nombreCancion dropdown""fotoLista detalles dropdown";
 }
 
 
@@ -1027,17 +1109,20 @@ li.listaR {
 /* MOBILE */
 
 @media only screen and (max-width: 600px) {
+
     /* NAV */
     /* Playist */
     .playlists .icon {
         visibility: hidden;
     }
+
     .c1,
     .c2,
     .c3,
     .c4 {
         visibility: hidden;
     }
+
     div.explorar {
         width: auto;
         height: auto;
@@ -1049,41 +1134,49 @@ li.listaR {
         margin: 10px;
         text-align: center;
     }
+
     .col1 img {
         margin-top: 20px;
         width: 80px;
         height: 80px;
     }
+
     .col2 {
         margin: 0;
         padding: 0;
     }
+
     div.container {
         margin: 0;
         grid-template-columns: 100%;
         grid-template-rows: auto;
-        grid-template-areas: "a" "c" "b";
+        grid-template-areas: "a""c""b";
         font-size: 15px;
     }
+
     .top-left {
         padding-top: 80px;
         padding-bottom: 20px;
     }
+
     .top-left p {
         padding: 0;
         margin: 0;
     }
+
     .song-list {
         margin: 0;
         padding: 0;
     }
+
     /* HOME */
     .contenedor {
         display: grid;
         grid-template-columns: 95%;
         grid-template-rows: auto;
-        grid-template-areas: "carousel" "explorar" "propaganda";
+        grid-template-areas: "carousel""explorar""propaganda";
     }
+
     /* Carousel */
     .carouselExampleIndicators,
     .carousel-inner,
@@ -1091,6 +1184,7 @@ li.listaR {
         margin: 0;
         width: 100%;
     }
+
     /* PLANES */
     div.cards {
         margin-left: 50px;
@@ -1101,11 +1195,13 @@ li.listaR {
         grid-template-rows: auto;
         grid-template-areas: "card4""card3""card2""card1";
     }
+
     div.card {
         height: auto;
         margin: 10px;
         padding: 5px;
     }
+
     /* Q & A */
     div.acordeon {
         padding-top: 70px;
@@ -1114,16 +1210,19 @@ li.listaR {
         padding-right: 5%;
         font-size: 15px;
     }
+
     div.acordeon li {
         padding: 8px;
         height: auto;
         text-align: start;
         font-size: 15px;
     }
+
     ul.acordeon div.cont {
         padding: 0;
         margin: 5px;
     }
+
     /* FORMULARIOS, Registrar */
     .form {
         padding: 0;
@@ -1132,9 +1231,11 @@ li.listaR {
         height: auto;
         width: auto;
     }
+
     div.input {
         margin-top: 20px;
     }
+
     div.input input#texto1,
     div.input input#texto2,
     div.input input#texto3 {
@@ -1142,37 +1243,46 @@ li.listaR {
         width: 310px;
         margin-top: 5px;
     }
+
     /* BUSQUEDAS */
     .filtros {
         overflow: auto;
     }
+
     .filtro {
         font-size: 15px;
     }
+
     .resultados {
         margin: 10px;
         margin-bottom: 80px;
     }
+
     .canciones {
         width: 100%;
     }
+
     .fotoLista,
     .fotoArtista {
         width: 50px;
         height: 50px;
     }
+
     .fotoRep {
         height: 40px;
         width: 50px;
     }
+
     li.listaR {
         font-size: 15px;
         grid-template-columns: 15% 75% 10%;
     }
+
     .detalles,
     .nombreCancion {
         margin-left: 10px;
     }
+
     h1 {
         padding-top: 100px;
     }
