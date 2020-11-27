@@ -5,10 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/77a4976099.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
+    <header>
+        <!-- https://www.youtube.com/watch?v=DvpSKoCyN5Q -->
+        <div class="navigation">
+            <ul>
+                <li><span class="icon"><i class="fa fa-search" aria-hidden="true"></i></span><span class="title"><input
+                            type="text"></span> <a href="busquedas.html"><button>Buscar</button></a></li>
+                <li><a href="home.html"><span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span><span
+                            class="title">Home</span></a></li>
+                <li><a href=""><span class="icon"><i class="fa fa-user" aria-hidden="true"></i></span><span
+                            class="title">Perfil</span></a></li>
+                <li><a href="favoritos.html"><span class="icon"><i class="fa fa-heart"
+                                aria-hidden="true"></i></span><span class="title">Favoritos</span></a></li>
+                <li><a href="playlists.html"><span class="icon"><i class="fa fa-music"
+                                aria-hidden="true"></i></span><span class="title">Mis playlist</span></a></li>
+                <li><a href=""><span class="icon"><i class="fa fa-podcast" aria-hidden="true"></i></span><span
+                            class="title">Mis posdcast</span></a></li>
+                <li><a href=""><span class="icon"><i class="fa fa-cogs" aria-hidden="true"></i></span><span
+                            class="title">Configuración</span></a></li>
+                <li><a href="home1.html"><span class="icon"><i class="fa fa-sign-out"
+                                aria-hidden="true"></i></span><span class="title">Cerrar session</span></a></li>
+                <li><a href="faq.html"><span class="icon"><i class="fa fa-question-circle"
+                                aria-hidden="true"></i></span><span class="title">Q & A</span></a></li>
+            </ul>
+        </div>
+
+        <div class="toggle" onclick='toggleMenu()'>
+
+        </div>
+        <script>
+            function toggleMenu() {
+                console.log("entro")
+                let navigation = document.querySelector('.navigation ');
+                navigation.classList.toggle('active');
+                let toggle = document.querySelector('.toggle ');
+                toggle.classList.toggle('active ');
+            }
+        </script>
+    </header>
     <h1>Planes</h1>
 
     <div class="cards">
@@ -42,7 +83,8 @@
                     <p><img src="icons/check.svg" alt=""> 2 Premium accounts for a couple under one roof</p>
                 </div>
                 <div class="description">
-                    <p><img src="icons/check.svg" alt=""> Duo Mix: a playlist for two, regularly updated with music you both enjoy</p>
+                    <p><img src="icons/check.svg" alt=""> Duo Mix: a playlist for two, regularly updated with music you
+                        both enjoy</p>
                 </div>
                 <div class="description">
                     <p><img src="icons/check.svg" alt=""> Ad-free music listening, play offline, on-demand playback</p>
@@ -58,10 +100,12 @@
             </div>
             <div class="box-inside">
                 <div class="description">
-                    <p><img src="icons/check.svg" alt=""> 6 Premium accounts for family members living under one roof</p>
+                    <p><img src="icons/check.svg" alt=""> 6 Premium accounts for family members living under one roof
+                    </p>
                 </div>
                 <div class="description">
-                    <p><img src="icons/check.svg" alt=""> Family Mix: a playlist for your family, regularly updated with music you all enjoy</p>
+                    <p><img src="icons/check.svg" alt=""> Family Mix: a playlist for your family, regularly updated with
+                        music you all enjoy</p>
                 </div>
                 <div class="description">
                     <p><img src="icons/check.svg" alt=""> Block explicit music</p>
