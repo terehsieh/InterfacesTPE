@@ -594,7 +594,6 @@ ul.acordeon div {
 }
 
 ul.acordeon div.cont:hover {
-
     transform-style: preserve-3d;
     transform: scale(1.06);
     width: auto;
@@ -1304,12 +1303,7 @@ li.listaR {
     h1 {
         padding-top: 100px;
     }
-<<<<<<< HEAD
-
     .toggle {
         visibility: visible;
     }
-=======
-    /* nav */
->>>>>>> a775ba7b58748a77b8ce9a4c6c74c688c5a1e239
 }
