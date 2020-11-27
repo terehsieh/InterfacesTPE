@@ -269,6 +269,7 @@ div.contenedor {
     .navigation {
         left: -60px;
     }
+
     .navigation.active {
         left: 0px;
         width: 100%;
@@ -690,7 +691,7 @@ div.explorar {
     grid-template-rows: max-content;
     grid-column-gap: 10px;
     /* grid-template-areas: "titulo sub1 sub2 sub3 sub4""foto playlists playlists playlists playlists"; */
-    grid-template-areas: "tipos" "cajas";
+    grid-template-areas: "tipos""cajas";
     background-color: rgba(33, 33, 33, 0.5);
     /* text-align: center; */
     grid-area: explorar;
@@ -710,7 +711,7 @@ div.explorar {
     grid-template-columns: 2;
     grid-template-rows: 20%;
     justify-items: stretch;
-    grid-template-areas: "a b" "c c";
+    grid-template-areas: "a b""c c";
 }
 
 .top-left {
@@ -1142,11 +1143,13 @@ li.listaR {
         cursor: pointer;
         z-index: 1;
     }
+
     /* NAV */
     /* Playist */
     .playlists .icon {
         visibility: hidden;
     }
+
     div.explorar {
         width: auto;
         height: max-content;
@@ -1158,37 +1161,45 @@ li.listaR {
         margin: 10px;
         text-align: center;
     }
+
     .col1 img {
         margin-top: 20px;
         width: 170px;
         height: 170px;
     }
+
     .col2 {
         margin: 0;
         padding: 0;
     }
+
     div.container {
         margin: 0;
         grid-template-columns: 100%;
         grid-template-rows: max-content;
-        grid-template-areas: "a" "c" "b";
+        grid-template-areas: "a""c""b";
         font-size: 15px;
     }
+
     .top-left {
         padding-top: 80px;
         padding-bottom: 20px;
     }
+
     .top-left p {
         padding: 0;
         margin: 0;
     }
+
     .song-list {
         margin: 0;
         padding: 0;
     }
+
     .propaganda {
         visibility: hidden;
     }
+
     /* HOME */
     div.contenedor {
         width: 100%;
@@ -1196,8 +1207,9 @@ li.listaR {
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: auto;
-        grid-template-areas: "carousel" "explorar";
+        grid-template-areas: "carousel""explorar";
     }
+
     /* Carousel */
     .carouselExampleIndicators,
     .carousel-inner,
@@ -1205,20 +1217,24 @@ li.listaR {
         margin: 0;
         width: 100%;
     }
+
     .explorar .tipos {
         width: 100%;
         /* visibility: visible; */
         /* height: 100%; */
         overflow: auto;
     }
+
     .cajas {
         width: 100%;
         margin: 0;
         padding: 0;
     }
+
     .cancionX {
         margin: 0;
     }
+
     /* PLANES */
     div.cards {
         margin-left: 50px;
@@ -1229,11 +1245,13 @@ li.listaR {
         grid-template-rows: auto;
         grid-template-areas: "card4""card3""card2""card1";
     }
+
     div.card {
         height: auto;
         margin: 10px;
         padding: 5px;
     }
+
     /* Q & A */
     div.acordeon {
         padding-top: 70px;
@@ -1242,16 +1260,19 @@ li.listaR {
         padding-right: 5%;
         font-size: 15px;
     }
+
     div.acordeon li {
         padding: 8px;
         height: auto;
         text-align: start;
         font-size: 15px;
     }
+
     ul.acordeon div.cont {
         padding: 0;
         margin: 5px;
     }
+
     /* FORMULARIOS, Registrar */
     .form {
         padding: 0;
@@ -1260,9 +1281,11 @@ li.listaR {
         height: auto;
         width: auto;
     }
+
     div.input {
         margin-top: 20px;
     }
+
     div.input input#texto1,
     div.input input#texto2,
     div.input input#texto3 {
@@ -1270,46 +1293,51 @@ li.listaR {
         width: 310px;
         margin-top: 5px;
     }
+
     /* BUSQUEDAS */
     .filtros {
         overflow: auto;
     }
+
     .filtro {
         font-size: 15px;
     }
+
     .resultados {
         margin: 10px;
         margin-bottom: 80px;
     }
+
     .canciones {
         width: 100%;
     }
+
     .fotoLista,
     .fotoArtista {
         width: 50px;
         height: 50px;
     }
+
     .fotoRep {
         height: 40px;
         width: 50px;
     }
+
     li.listaR {
         font-size: 15px;
         grid-template-columns: 15% 75% 10%;
     }
+
     .detalles,
     .nombreCancion {
         margin-left: 10px;
     }
+
     h1 {
         padding-top: 100px;
     }
-<<<<<<< HEAD
 
     .toggle {
         visibility: visible;
     }
-=======
-    /* nav */
->>>>>>> a775ba7b58748a77b8ce9a4c6c74c688c5a1e239
 }
