@@ -35,10 +35,39 @@ button {
 div.contenedor {
     display: grid;
     grid-template-columns: 65% 30%;
-    grid-template-rows: 45%;
+    grid-template-rows: 35% 60%;
     grid-column-gap: 60px;
-    grid-row-gap: 30px;
+    grid-row-gap: 60px;
     grid-template-areas: "carousel propaganda""explorar propaganda";
+}
+
+#c1 {
+    border-bottom: 3px solid #1db1f0;
+}
+
+.tipos {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 20% 23% 23% 23% 23%;
+    grid-area: tipos;
+    /* overflow: auto; */
+}
+
+.tipo {
+    width: auto;
+    height: 58px;
+    margin: 3px;
+    text-align: center;
+    align-items: center;
+}
+
+.tipo.tipoA {
+    padding-top: 15px;
+}
+
+.tipo:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 
@@ -240,7 +269,6 @@ div.contenedor {
     .navigation {
         left: -60px;
     }
-
     .navigation.active {
         left: 0px;
         width: 100%;
@@ -641,62 +669,30 @@ ul.acordeon div.cont:hover {
 
 /* PLAYLIST */
 
-.titulo {
-    grid-area: titulo;
+.cancion {
+    grid-area: cancion;
 }
 
-.c1 {
-    grid-area: sub1;
-    border-bottom: 3px solid #1db1f0;
-}
-
-.c1 p {
-    margin: 0;
-    padding: 0;
-}
-
-.c2 {
-    grid-area: sub2;
-
-}
-
-.c3 {
-    grid-area: sub3;
-}
-
-.c4 {
-    grid-area: sub4;
-}
-
-.titulo,
-.c1,
-.c2,
-.c3,
-.c4 {
-    margin-top: 20px;
-}
-
-.c1:hover,
-.c2:hover,
-.c3:hover,
-.c4:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-
+.playlists {
+    grid-area: playlists;
+    text-align: left;
 }
 
 div.explorar {
     margin: 0;
     padding: 0;
-    margin-top: 10px;
+    margin-top: 5px;
     margin-left: 90px;
     width: 750px;
     height: 360px;
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: auto;
-    grid-template-areas: "sub1 sub2 sub3 sub4""c c c c";
+    grid-template-columns: 90%;
+    grid-template-rows: max-content;
+    grid-column-gap: 10px;
+    /* grid-template-areas: "titulo sub1 sub2 sub3 sub4""foto playlists playlists playlists playlists"; */
+    grid-template-areas: "tipos" "cajas";
     background-color: rgba(33, 33, 33, 0.5);
-    text-align: center;
+    /* text-align: center; */
     grid-area: explorar;
 }
 
@@ -708,13 +704,13 @@ div.explorar {
 
 
 /* Playlist */
+
 .container {
     display: grid;
     grid-template-columns: 2;
     grid-template-rows: 20%;
     justify-items: stretch;
-    grid-template-areas: "a b"
-        "c c";
+    grid-template-areas: "a b" "c c";
 }
 
 .top-left {
@@ -731,7 +727,6 @@ div.explorar {
     margin-left: 0px;
     width: 234px;
     height: 30px;
-
 }
 
 .dropdown-menu {
@@ -773,7 +768,6 @@ div.explorar {
 .playlist-icons>i {
     color: #828282;
 }
-
 
 .play-hide {
     position: absolute;
@@ -824,7 +818,6 @@ div.explorar {
     width: 35%;
     color: #BDBDBD;
 }
-
 
 .comentarios {
     margin-top: 35px;
@@ -959,12 +952,46 @@ p.filtro:hover {
 }
 
 .cajas {
-    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .resultados {
-
     margin-left: 20%;
+}
+
+
+/* Explorar */
+
+.cancionX {
+    /* margin-top: 30px; */
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 250px;
+    margin-left: 20px;
+    overflow: auto;
+}
+
+.cancionX ul {
+    height: 200px;
+}
+
+.cancionX .listaR {
+    /* margin: 0; */
+    height: 60px;
+    font-size: 15px;
+    /* line-height: 10px; */
+}
+
+.cancionX .listaR .nombreCancion {
+    margin: 0;
+}
+
+.cancionX .fotoLista {
+    /* margin: 10px; */
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    grid-area: fotoLista;
 }
 
 .canciones {
@@ -1109,82 +1136,68 @@ li.listaR {
     .toggle {
         position: absolute;
         top: 0;
-
         width: 100%;
         height: 60px;
         background: #1db1f0;
         cursor: pointer;
         z-index: 1;
     }
-
-
     /* NAV */
     /* Playist */
     .playlists .icon {
         visibility: hidden;
     }
-
-    .c1,
-    .c2,
-    .c3,
-    .c4 {
-        visibility: hidden;
-    }
-
     div.explorar {
         width: auto;
-        height: auto;
+        height: max-content;
         display: grid;
-        grid-template-columns: 95%;
+        grid-template-columns: 100%;
         grid-template-rows: auto;
         grid-template-areas: "titulo""foto""playlists";
         background-color: rgba(33, 33, 33, 0.3);
         margin: 10px;
         text-align: center;
     }
-
     .col1 img {
         margin-top: 20px;
         width: 170px;
         height: 170px;
     }
-
     .col2 {
         margin: 0;
         padding: 0;
     }
-
     div.container {
         margin: 0;
         grid-template-columns: 100%;
-        grid-template-rows: auto;
-        grid-template-areas: "a""c""b";
+        grid-template-rows: max-content;
+        grid-template-areas: "a" "c" "b";
         font-size: 15px;
     }
-
     .top-left {
         padding-top: 80px;
         padding-bottom: 20px;
     }
-
     .top-left p {
         padding: 0;
         margin: 0;
     }
-
     .song-list {
         margin: 0;
         padding: 0;
     }
-
-    /* HOME */
-    .contenedor {
-        display: grid;
-        grid-template-columns: 95%;
-        grid-template-rows: auto;
-        grid-template-areas: "carousel""explorar""propaganda";
+    .propaganda {
+        visibility: hidden;
     }
-
+    /* HOME */
+    div.contenedor {
+        width: 100%;
+        padding-top: 100px;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas: "carousel" "explorar";
+    }
     /* Carousel */
     .carouselExampleIndicators,
     .carousel-inner,
@@ -1192,7 +1205,20 @@ li.listaR {
         margin: 0;
         width: 100%;
     }
-
+    .explorar .tipos {
+        width: 100%;
+        /* visibility: visible; */
+        /* height: 100%; */
+        overflow: auto;
+    }
+    .cajas {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .cancionX {
+        margin: 0;
+    }
     /* PLANES */
     div.cards {
         margin-left: 50px;
@@ -1203,13 +1229,11 @@ li.listaR {
         grid-template-rows: auto;
         grid-template-areas: "card4""card3""card2""card1";
     }
-
     div.card {
         height: auto;
         margin: 10px;
         padding: 5px;
     }
-
     /* Q & A */
     div.acordeon {
         padding-top: 70px;
@@ -1218,19 +1242,16 @@ li.listaR {
         padding-right: 5%;
         font-size: 15px;
     }
-
     div.acordeon li {
         padding: 8px;
         height: auto;
         text-align: start;
         font-size: 15px;
     }
-
     ul.acordeon div.cont {
         padding: 0;
         margin: 5px;
     }
-
     /* FORMULARIOS, Registrar */
     .form {
         padding: 0;
@@ -1239,11 +1260,9 @@ li.listaR {
         height: auto;
         width: auto;
     }
-
     div.input {
         margin-top: 20px;
     }
-
     div.input input#texto1,
     div.input input#texto2,
     div.input input#texto3 {
@@ -1251,51 +1270,46 @@ li.listaR {
         width: 310px;
         margin-top: 5px;
     }
-
     /* BUSQUEDAS */
     .filtros {
         overflow: auto;
     }
-
     .filtro {
         font-size: 15px;
     }
-
     .resultados {
         margin: 10px;
         margin-bottom: 80px;
     }
-
     .canciones {
         width: 100%;
     }
-
     .fotoLista,
     .fotoArtista {
         width: 50px;
         height: 50px;
     }
-
     .fotoRep {
         height: 40px;
         width: 50px;
     }
-
     li.listaR {
         font-size: 15px;
         grid-template-columns: 15% 75% 10%;
     }
-
     .detalles,
     .nombreCancion {
         margin-left: 10px;
     }
-
     h1 {
         padding-top: 100px;
     }
+<<<<<<< HEAD
 
     .toggle {
         visibility: visible;
     }
+=======
+    /* nav */
+>>>>>>> a775ba7b58748a77b8ce9a4c6c74c688c5a1e239
 }
