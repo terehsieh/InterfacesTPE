@@ -37,7 +37,7 @@ div.contenedor {
     grid-template-columns: 65% 30%;
     grid-template-rows: 45%;
     grid-column-gap: 60px;
-    grid-row-gap: 10px;
+    grid-row-gap: 30px;
     grid-template-areas: "carousel propaganda""explorar propaganda";
 }
 
@@ -49,6 +49,7 @@ div.contenedor {
 } */
 
 .carousel {
+    margin-top: 5%;
     width: 750px;
     height: 300px;
     position: relative;
@@ -213,7 +214,8 @@ div.contenedor {
     width: 100%;
     height: 100%;
     line-height: 60px;
-    text-align: center;
+    text-align: right;
+    padding-right: 20px;
     font-size: 24px;
     color: #fff;
 }
@@ -654,7 +656,7 @@ ul.acordeon div.cont:hover {
 
 .c2 {
     grid-area: sub2;
-    padding-top: 20px;
+
 }
 
 .c3 {
@@ -678,16 +680,7 @@ ul.acordeon div.cont:hover {
 .c3:hover,
 .c4:hover {
     background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
-}
 
-.foto {
-    grid-area: foto;
-}
-
-.playlists {
-    grid-area: playlists;
-    text-align: left;
 }
 
 div.explorar {
@@ -696,12 +689,11 @@ div.explorar {
     margin-top: 10px;
     margin-left: 90px;
     width: 750px;
-    height: 350px;
+    height: 360px;
     display: grid;
-    grid-template-columns: 30% 16% 16% 16% 16%;
+    grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: auto;
-    /* grid-template-areas: "titulo sub1 sub2 sub3 sub4""foto playlists playlists playlists playlists"; */
-    grid-template-areas: "titulo sub1 sub2 sub3 sub4""foto c c c c";
+    grid-template-areas: "sub1 sub2 sub3 sub4""c c c c";
     background-color: rgba(33, 33, 33, 0.5);
     text-align: center;
     grid-area: explorar;
@@ -1076,7 +1068,7 @@ li.listaR {
     right: 0;
     display: none;
     position: absolute;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: #2E2E2E;
     min-width: 200px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -1092,7 +1084,7 @@ li.listaR {
 
 .dropdown-content a:hover,
 .dropup-content a:hover {
-    background-color: rgba(255, 255, 255, 0.4)
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
 .dropdown:hover .dropdown-content,
@@ -1102,13 +1094,24 @@ li.listaR {
 
 .dropdown:hover .dropbtn,
 .dropup:hover .dropbtn {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: none;
 }
 
 
 /* MOBILE */
 
 @media only screen and (max-width: 600px) {
+    .toggle {
+        position: absolute;
+        top: 0;
+
+        width: 100%;
+        height: 60px;
+        background: #1db1f0;
+        cursor: pointer;
+        z-index: 1;
+    }
+
 
     /* NAV */
     /* Playist */
@@ -1137,8 +1140,8 @@ li.listaR {
 
     .col1 img {
         margin-top: 20px;
-        width: 80px;
-        height: 80px;
+        width: 170px;
+        height: 170px;
     }
 
     .col2 {
