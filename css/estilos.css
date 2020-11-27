@@ -22,11 +22,20 @@ a {
 }
 
 button {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    padding: 15px 30px;
+    color: white;
+    text-transform: uppercase;
+    /* letter-spacing: 4px; */
+    text-decoration: none;
+    text-align: center;
+    font-size: 12px;
     border-radius: 20px;
-    background-color: #1db1f0;
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
+    background: #2196f3;
+    border: none;
+    margin-top: 20px;
 }
 
 
