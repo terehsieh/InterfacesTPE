@@ -201,6 +201,7 @@ div.contenedor {
     background: #1db1f0;
     cursor: pointer;
     z-index: 1;
+    visibility: hidden;
 }
 
 .toggle.active {
@@ -565,6 +566,7 @@ ul.acordeon div {
 }
 
 ul.acordeon div.cont:hover {
+
     transform-style: preserve-3d;
     transform: scale(1.06);
     width: auto;
@@ -1291,5 +1293,9 @@ li.listaR {
 
     h1 {
         padding-top: 100px;
+    }
+
+    .toggle {
+        visibility: visible;
     }
 }
