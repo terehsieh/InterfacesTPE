@@ -278,6 +278,7 @@ div.contenedor {
     .navigation {
         left: -60px;
     }
+
     .navigation.active {
         left: 0px;
         width: 100%;
@@ -704,7 +705,7 @@ div.explorar {
     grid-template-rows: max-content;
     grid-column-gap: 10px;
     /* grid-template-areas: "titulo sub1 sub2 sub3 sub4""foto playlists playlists playlists playlists"; */
-    grid-template-areas: "tipos" "cajas";
+    grid-template-areas: "tipos""cajas";
     background-color: rgba(33, 33, 33, 0.5);
     /* text-align: center; */
     grid-area: explorar;
@@ -724,7 +725,7 @@ div.explorar {
     grid-template-columns: 2;
     grid-template-rows: 20%;
     justify-items: stretch;
-    grid-template-areas: "a b" "c c";
+    grid-template-areas: "a b""c c";
 }
 
 .top-left {
@@ -741,6 +742,26 @@ div.explorar {
     margin-left: 0px;
     width: 234px;
     height: 30px;
+    display: grid;
+    grid-template-areas: "a a a a b";
+}
+
+.btn-calificar p {
+    grid-area: a;
+    justify-content: center;
+    margin-top: 0px;
+    color: #BDBDBD;
+}
+
+#flecha {
+    grid-area: b;
+    justify-content: end;
+}
+
+#texto-usu {
+    background-color: #393939;
+    opacity: 20%;
+    margin-left: 5px;
 }
 
 .dropdown-menu {
@@ -768,8 +789,14 @@ div.explorar {
     justify-items: end;
 }
 
+.top-left>.col1 img:hover {
+    opacity: 40%;
+}
+
 .top-left>.col1:hover .play-hide {
     display: block;
+    opacity: 100%;
+
 }
 
 .playlist-icons {
@@ -787,8 +814,9 @@ div.explorar {
     position: absolute;
     transform: scale(3.5);
     margin-top: 7%;
-    margin-left: 500px;
+    padding-left: 5.3%;
     display: none;
+
 }
 
 .top-left>.col2 {
@@ -850,15 +878,31 @@ div.explorar {
 
 .opiniones>div {
     display: grid;
-    grid-template-areas: "usu usu usu icono";
+    grid-template-columns: 97% 3%;
+    grid-template-areas: "usu icono";
 }
 
 .icons-usuario {
     margin-top: 10px;
     grid-area: icono;
     justify-items: right;
+}
+
+.star-like {
     display: grid;
-    grid-template-areas: "stars ico1 ico2";
+    grid-template-columns: 80% 20%;
+    grid-template-areas: "space icons";
+}
+
+.star-like>i {
+    grid-area: icons;
+    color: #828282;
+    display: grid;
+    grid-template-areas: "star like";
+}
+
+.star-like>i fa-star {
+    grid-area: star;
 }
 
 .icons-usuario>i {
@@ -934,7 +978,7 @@ div.explorar {
 }
 
 .song-list>li:hover {
-    transform: scale(1.007);
+    transform: scale(1.025);
     transition-delay: 2.5s ease-in;
     color: #252525;
     background-color: #2a6f8d;
@@ -1214,8 +1258,8 @@ li.listaR {
     position: absolute;
     background-color: #2E2E2E;
     min-width: 200px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+
+    z-index: 2;
 }
 
 .dropdown-content a,
@@ -1224,7 +1268,9 @@ li.listaR {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    background-color: rgba(0, 0, 0, 1);
 }
+
 
 .dropdown-content a:hover,
 .dropup-content a:hover {
@@ -1254,11 +1300,13 @@ li.listaR {
         cursor: pointer;
         z-index: 1;
     }
+
     /* NAV */
     /* Playist */
     .playlists .icon {
         visibility: hidden;
     }
+
     div.explorar {
         width: auto;
         height: max-content;
@@ -1270,37 +1318,50 @@ li.listaR {
         margin: 10px;
         text-align: center;
     }
+
     .col1 img {
         margin-top: 20px;
         width: 170px;
         height: 170px;
     }
+
+    .top-left>.col1:hover .play-hide {
+        visibility: hidden;
+        opacity: none;
+    }
+
     .col2 {
         margin: 0;
         padding: 0;
     }
+
     div.container {
         margin: 0;
         grid-template-columns: 100%;
         grid-template-rows: max-content;
-        grid-template-areas: "a" "c" "b";
+        grid-template-areas: "a""c""b";
         font-size: 15px;
     }
+
     .top-left {
         padding-top: 80px;
         padding-bottom: 20px;
     }
+
     .top-left p {
         padding: 0;
         margin: 0;
     }
+
     .song-list {
         margin: 0;
         padding: 0;
     }
+
     .propaganda {
         visibility: hidden;
     }
+
     /* HOME */
     div.contenedor {
         width: 100%;
@@ -1308,8 +1369,9 @@ li.listaR {
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: auto;
-        grid-template-areas: "carousel" "explorar";
+        grid-template-areas: "carousel""explorar";
     }
+
     /* Carousel */
     .carouselExampleIndicators,
     .carousel-inner,
@@ -1317,20 +1379,24 @@ li.listaR {
         margin: 0;
         width: 100%;
     }
+
     .explorar .tipos {
         width: 100%;
         /* visibility: visible; */
         /* height: 100%; */
         overflow: auto;
     }
+
     .cajas {
         width: 100%;
         margin: 0;
         padding: 0;
     }
+
     .cancionX {
         margin: 0;
     }
+
     /* PLANES */
     div.cards {
         margin: 0;
@@ -1343,11 +1409,13 @@ li.listaR {
         grid-template-rows: auto;
         grid-template-areas: "card4""card3""card2""card1";
     }
+
     div.card {
         height: auto;
         margin: 10px;
         padding: 5px;
     }
+
     /* Q & A */
     div.acordeon {
         padding-top: 70px;
@@ -1356,16 +1424,19 @@ li.listaR {
         padding-right: 5%;
         font-size: 15px;
     }
+
     div.acordeon li {
         padding: 8px;
         height: auto;
         text-align: start;
         font-size: 15px;
     }
+
     ul.acordeon div.cont {
         padding: 0;
         margin: 5px;
     }
+
     /* FORMULARIOS, Registrar */
     .form {
         padding: 0;
@@ -1374,9 +1445,11 @@ li.listaR {
         height: auto;
         width: auto;
     }
+
     div.input {
         margin-top: 20px;
     }
+
     div.input input#texto1,
     div.input input#texto2,
     div.input input#texto3 {
@@ -1384,40 +1457,50 @@ li.listaR {
         width: 310px;
         margin-top: 5px;
     }
+
     /* BUSQUEDAS */
     .filtros {
         overflow: auto;
     }
+
     .filtro {
         font-size: 15px;
     }
+
     .resultados {
         margin: 10px;
         margin-bottom: 80px;
     }
+
     .canciones {
         width: 100%;
     }
+
     .fotoLista,
     .fotoArtista {
         width: 50px;
         height: 50px;
     }
+
     .fotoRep {
         height: 40px;
         width: 50px;
     }
+
     li.listaR {
         font-size: 15px;
         grid-template-columns: 15% 75% 10%;
     }
+
     .detalles,
     .nombreCancion {
         margin-left: 10px;
     }
+
     h1 {
         padding-top: 100px;
     }
+
     .toggle {
         visibility: visible;
     }
