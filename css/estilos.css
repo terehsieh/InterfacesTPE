@@ -962,8 +962,7 @@ p.filtro:hover {
 }
 
 .resultados {
-    padding-top: 80px;
-    /* margin: 100px; */
+
     margin-left: 20%;
 }
 
@@ -971,6 +970,11 @@ p.filtro:hover {
     margin-top: 30px;
     background-color: rgba(0, 0, 0, 0.3);
     width: 800px;
+}
+
+.canciones .listaR:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .fotoArtista {
