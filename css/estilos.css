@@ -565,7 +565,6 @@ ul.acordeon div {
 }
 
 ul.acordeon div.cont:hover {
-    box-shadow: 0 0 5px #e2dcdd, 0 0 100px #b8a8ad, 0 0 10px #d17191;
     transform-style: preserve-3d;
     transform: scale(1.06);
     width: auto;
