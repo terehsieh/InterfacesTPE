@@ -278,7 +278,6 @@ div.contenedor {
     .navigation {
         left: -60px;
     }
-
     .navigation.active {
         left: 0px;
         width: 100%;
@@ -796,7 +795,6 @@ div.explorar {
 .top-left>.col1:hover .play-hide {
     display: block;
     opacity: 100%;
-
 }
 
 .playlist-icons {
@@ -816,7 +814,6 @@ div.explorar {
     margin-top: 7%;
     padding-left: 5.3%;
     display: none;
-
 }
 
 .top-left>.col2 {
@@ -851,6 +848,10 @@ div.explorar {
     border-radius: 5px;
     padding: 15px;
     overflow: auto;
+}
+
+.top-right .comentarios p {
+    font-size: 15px;
 }
 
 .top-right>.playlist-subtittle {
@@ -893,7 +894,6 @@ div.explorar {
     grid-template-areas: "iconito1 iconito2";
     justify-content: space-evenly;
     margin-right: 0px;
-
 }
 
 .star-like .estrella {
@@ -1033,15 +1033,12 @@ p.filtro:hover {
     0% {
         transform: translateX(100%);
     }
-
     40% {
         transform: translateX(-10%);
     }
-
     80% {
         transform: translateX(0%);
     }
-
     100% {
         transform: translateX(0px);
     }
@@ -1080,7 +1077,6 @@ p.filtro:hover {
     from {
         transform: rotateY(0deg);
     }
-
     to {
         transform: rotateY(360deg);
     }
@@ -1090,16 +1086,13 @@ p.filtro:hover {
     0% {
         transform: translateX(100%);
     }
-
     40% {
         transform: translateX(-10%);
         transform: translatey(-10%);
     }
-
     80% {
         transform: translateX(0%);
     }
-
     100% {
         transform: translateX(0px);
     }
@@ -1110,13 +1103,11 @@ p.filtro:hover {
         box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.9);
         transform: translatey(0px);
     }
-
     50% {
         box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
         transform: translatey(-15px);
         transform: translateX(10px);
     }
-
     100% {
         box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.9);
         transform: translatey(0px);
@@ -1268,7 +1259,6 @@ li.listaR {
     position: absolute;
     background-color: #2E2E2E;
     min-width: 200px;
-
     z-index: 2;
 }
 
@@ -1280,7 +1270,6 @@ li.listaR {
     display: block;
     background-color: rgba(0, 0, 0, 1);
 }
-
 
 .dropdown-content a:hover,
 .dropup-content a:hover {
@@ -1310,13 +1299,20 @@ li.listaR {
         cursor: pointer;
         z-index: 1;
     }
-
     /* NAV */
+    footer {
+        position: absolute;
+        bottom: 0;
+    }
+    .navigation {
+        margin-top: 50px;
+        /* height: 100%; */
+        position: absolute;
+    }
     /* Playist */
     .playlists .icon {
         visibility: hidden;
     }
-
     div.explorar {
         width: auto;
         height: max-content;
@@ -1328,23 +1324,19 @@ li.listaR {
         margin: 10px;
         text-align: center;
     }
-
     .col1 img {
         margin-top: 20px;
         width: 170px;
         height: 170px;
     }
-
     .top-left>.col1:hover .play-hide {
         visibility: hidden;
         opacity: none;
     }
-
     .col2 {
         margin: 0;
         padding: 0;
     }
-
     div.container {
         margin: 0;
         grid-template-columns: 100%;
@@ -1352,26 +1344,38 @@ li.listaR {
         grid-template-areas: "a""c""b";
         font-size: 15px;
     }
-
     .top-left {
         padding-top: 80px;
         padding-bottom: 20px;
     }
-
     .top-left p {
         padding: 0;
         margin: 0;
+        font-size: 15px;
     }
-
+    .top-left .dropdown button {
+        padding: 0;
+        margin: 0;
+        width: 150px;
+    }
+    .top-left img {
+        margin-top: 30px;
+        width: 110px;
+        height: 110px;
+    }
+    .top-right p {
+        font-size: 15px;
+    }
+    .col2 {
+        grid-template-columns: 30% 70%;
+    }
     .song-list {
         margin: 0;
         padding: 0;
     }
-
     .propaganda {
         visibility: hidden;
     }
-
     /* HOME */
     div.contenedor {
         width: 100%;
@@ -1381,7 +1385,6 @@ li.listaR {
         grid-template-rows: auto;
         grid-template-areas: "carousel""explorar";
     }
-
     /* Carousel */
     .carouselExampleIndicators,
     .carousel-inner,
@@ -1389,24 +1392,20 @@ li.listaR {
         margin: 0;
         width: 100%;
     }
-
     .explorar .tipos {
         width: 100%;
         /* visibility: visible; */
         /* height: 100%; */
         overflow: auto;
     }
-
     .cajas {
         width: 100%;
         margin: 0;
         padding: 0;
     }
-
     .cancionX {
         margin: 0;
     }
-
     /* PLANES */
     div.cards {
         margin: 0;
@@ -1419,13 +1418,11 @@ li.listaR {
         grid-template-rows: auto;
         grid-template-areas: "card4""card3""card2""card1";
     }
-
     div.card {
         height: auto;
         margin: 10px;
         padding: 5px;
     }
-
     /* Q & A */
     div.acordeon {
         padding-top: 70px;
@@ -1434,19 +1431,16 @@ li.listaR {
         padding-right: 5%;
         font-size: 15px;
     }
-
     div.acordeon li {
         padding: 8px;
         height: auto;
         text-align: start;
         font-size: 15px;
     }
-
     ul.acordeon div.cont {
         padding: 0;
         margin: 5px;
     }
-
     /* FORMULARIOS, Registrar */
     .form {
         padding: 0;
@@ -1455,11 +1449,9 @@ li.listaR {
         height: auto;
         width: auto;
     }
-
     div.input {
         margin-top: 20px;
     }
-
     div.input input#texto1,
     div.input input#texto2,
     div.input input#texto3 {
@@ -1467,54 +1459,44 @@ li.listaR {
         width: 310px;
         margin-top: 5px;
     }
-
     /* BUSQUEDAS */
     .filtros {
         overflow: auto;
     }
-
     .filtro {
         font-size: 15px;
     }
-
     .resultados {
         margin: 10px;
         margin-bottom: 80px;
     }
-
     .canciones {
         width: 100%;
     }
-
     .fotoLista,
     .fotoArtista {
         width: 50px;
         height: 50px;
     }
-
     .fotoRep {
         height: 40px;
         width: 50px;
     }
-
     li.listaR {
         font-size: 15px;
         grid-template-columns: 15% 75% 10%;
     }
-
     .detalles,
     .nombreCancion {
         margin-left: 10px;
     }
-
     h1 {
         padding-top: 100px;
     }
-
     .toggle {
         visibility: visible;
+        position: fixed;
     }
-
     /* reproductor de musica */
     .reproductor {
         grid-template-columns: 30% 40% 30%;
@@ -1522,23 +1504,19 @@ li.listaR {
         grid-column-gap: 20px;
         grid-template-areas: " cancion  player playlist"" artista  player playlist"
     }
-
     .reproductor .cancion {
         margin-top: 5px;
         margin-left: 10px;
     }
-
     .reproductor .artista {
         margin-left: 10px;
     }
-
     .reproductor .player i.fa-step-backward,
     .reproductor .player i.fa-step-forward {
         margin-left: 10px;
         margin-right: 10px;
         font-size: 20px;
     }
-
     .reproductor .player i.fa-play-circle-o {
         font-size: 30px;
     }
