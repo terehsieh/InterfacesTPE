@@ -1306,4 +1306,27 @@ li.listaR {
     .toggle {
         visibility: visible;
     }
+    /* reproductor de musica */
+    .reproductor {
+        grid-template-columns: 30% 40% 30%;
+        grid-template-rows: auto;
+        grid-column-gap: 20px;
+        grid-template-areas: " cancion  player playlist"" artista  player playlist"
+    }
+    .reproductor .cancion {
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+    .reproductor .artista {
+        margin-left: 10px;
+    }
+    .reproductor .player i.fa-step-backward,
+    .reproductor .player i.fa-step-forward {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 20px;
+    }
+    .reproductor .player i.fa-play-circle-o {
+        font-size: 30px;
+    }
 }
