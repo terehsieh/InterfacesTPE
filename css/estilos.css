@@ -858,7 +858,7 @@ div.explorar {
     position: absolute;
     margin-top: 0%;
     background-color: #2E2E2E;
-    width: 35%;
+    width: 36%;
     color: #BDBDBD;
 }
 
@@ -1053,6 +1053,9 @@ p.filtro:hover {
     display: none;
 }
 
+
+} */
+
 @keyframes show_slidex {
     0% {
         transform: translateX(0%);
@@ -1066,7 +1069,7 @@ p.filtro:hover {
     100% {
         transform: translateX(0%);
     }
-} */
+}
 
 .propaganda {
     animation: flip 5s ease backwards;
@@ -1080,6 +1083,10 @@ p.filtro:hover {
     to {
         transform: rotateY(360deg);
     }
+}
+
+.opiniones {
+    animation: show_slidex 5s ease backwards;
 }
 
 @keyframes show_pro {
